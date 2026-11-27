@@ -87,8 +87,8 @@
 - **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-job-salary-comp-mcp`
 - **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-job-salary-comp-mcp.html
 
-## Domain Email Deliverability & DNS Audit Parser (MCP & PPE) (`veteran_steam_iyn/niche-domain-whois-dns-mcp`)
-- **Direct Answer**: Structure public DNS/SPF/DKIM/DMARC records into B2B email deliverability risk flags and security score JSON.
+## Live Domain SPF/DMARC/MX Email Deliverability Auditor (MCP) (`veteran_steam_iyn/niche-domain-whois-dns-mcp`)
+- **Direct Answer**: Query live DNS-over-HTTPS for any domain (e.g. stripe.com, openai.com) to audit SPF, DMARC enforcement, MX provider, and B2B email deliverability score.
 - **Pricing**: `$0.015` USD per `dns_audit_parsed` (Pay-Per-Event, no subscription)
 - **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-domain-whois-dns-mcp`
 - **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-domain-whois-dns-mcp.html
@@ -117,8 +117,8 @@
 - **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-appstore-churn-signal-mcp`
 - **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-appstore-churn-signal-mcp.html
 
-## Crypto Token Unlock & DAO Proposal Parser (MCP & PPE) (`veteran_steam_iyn/niche-crypto-token-unlock-mcp`)
-- **Direct Answer**: Parse public token vesting unlock schedules and DAO governance proposals into unlock date, USD value, and supply-impact JSON.
+## Live Crypto FDV & Locked Supply Overhang Extractor (MCP) (`veteran_steam_iyn/niche-crypto-token-unlock-mcp`)
+- **Direct Answer**: Query live CoinGecko public market data to calculate circulating vs total supply, locked overhang %, market cap, and FDV ratio for Web3 AI Agents.
 - **Pricing**: `$0.030` USD per `token_unlock_parsed` (Pay-Per-Event, no subscription)
 - **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-crypto-token-unlock-mcp`
 - **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-crypto-token-unlock-mcp.html

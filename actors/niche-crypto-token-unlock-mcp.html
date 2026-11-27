@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Crypto Token Unlock &amp; DAO Proposal Parser (MCP &amp; PPE) — Pay-Per-Event MCP Server | Neon MCP Hub</title>
-  <meta name="description" content="Parse public token vesting unlock schedules and DAO governance proposals into unlock date, USD value, and supply-impact JSON. Only $0.030 per token_unlock_parsed via Apify MCP." />
+  <title>Live Crypto FDV &amp; Locked Supply Overhang Extractor (MCP) — Pay-Per-Event MCP Server | Neon MCP Hub</title>
+  <meta name="description" content="Query live CoinGecko public market data to calculate circulating vs total supply, locked overhang %, market cap, and FDV ratio for Web3 AI Agents. Only $0.030 per token_unlock_parsed via Apify MCP." />
   <link rel="canonical" href="https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-crypto-token-unlock-mcp.html" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "SoftwareApplication", "name": "Crypto Token Unlock & DAO Proposal Parser (MCP & PPE)", "applicationCategory": "DeveloperApplication", "operatingSystem": "Cloud / MCP", "description": "Parse public token vesting unlock schedules and DAO governance proposals into unlock date, USD value, and supply-impact JSON.", "url": "https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-crypto-token-unlock-mcp.html", "offers": {"@type": "Offer", "price": "0.030", "priceCurrency": "USD", "description": "Pay-Per-Event pricing: $0.030 USD per token_unlock_parsed"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does Crypto Token Unlock & DAO Proposal Parser (MCP & PPE) cost?", "acceptedAnswer": {"@type": "Answer", "text": "Crypto Token Unlock & DAO Proposal Parser (MCP & PPE) uses Pay-Per-Event pricing at $0.030 USD per token_unlock_parsed, with zero monthly subscription fees."}}, {"@type": "Question", "name": "How do I connect niche-crypto-token-unlock-mcp to Claude Desktop or Cursor via MCP?", "acceptedAnswer": {"@type": "Answer", "text": "Add the Apify MCP Server URL https://mcp.apify.com/?actors=veteran_steam_iyn/niche-crypto-token-unlock-mcp to your mcpServers JSON configuration in Claude Desktop or Cursor."}}]}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "SoftwareApplication", "name": "Live Crypto FDV & Locked Supply Overhang Extractor (MCP)", "applicationCategory": "DeveloperApplication", "operatingSystem": "Cloud / MCP", "description": "Query live CoinGecko public market data to calculate circulating vs total supply, locked overhang %, market cap, and FDV ratio for Web3 AI Agents.", "url": "https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-crypto-token-unlock-mcp.html", "offers": {"@type": "Offer", "price": "0.030", "priceCurrency": "USD", "description": "Pay-Per-Event pricing: $0.030 USD per token_unlock_parsed"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does Live Crypto FDV & Locked Supply Overhang Extractor (MCP) cost?", "acceptedAnswer": {"@type": "Answer", "text": "Live Crypto FDV & Locked Supply Overhang Extractor (MCP) uses Pay-Per-Event pricing at $0.030 USD per token_unlock_parsed, with zero monthly subscription fees."}}, {"@type": "Question", "name": "How do I connect niche-crypto-token-unlock-mcp to Claude Desktop or Cursor via MCP?", "acceptedAnswer": {"@type": "Answer", "text": "Add the Apify MCP Server URL https://mcp.apify.com/?actors=veteran_steam_iyn/niche-crypto-token-unlock-mcp to your mcpServers JSON configuration in Claude Desktop or Cursor."}}]}]}</script>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: #070b14; color: #e2e8f0; margin: 0; padding: 32px 20px 80px; line-height: 1.65; }
     .wrap { max-width: 820px; margin: 0 auto; }
@@ -22,7 +22,7 @@
 <body>
   <div class="wrap">
     <p><a href="../index.html">← Back to Neon MCP Hub (All 10 B2B MCP Servers)</a></p>
-    <h1>Crypto Token Unlock &amp; DAO Proposal Parser (MCP &amp; PPE)</h1>
+    <h1>Live Crypto FDV &amp; Locked Supply Overhang Extractor (MCP)</h1>
     <div>
       <span class="pill">Pay-Per-Event: $0.030 / token_unlock_parsed</span>
       <span class="pill">Zero Monthly Fee</span>
@@ -30,7 +30,7 @@
     </div>
 
     <h2>What does niche-crypto-token-unlock-mcp do?</h2>
-    <p>Parse public token vesting unlock schedules and DAO governance proposals into unlock date, USD value, and supply-impact JSON. It outputs clean, schema-validated JSON designed for AI Agents, RAG pipelines, and B2B automation workflows using only public open data.</p>
+    <p>Query live CoinGecko public market data to calculate circulating vs total supply, locked overhang %, market cap, and FDV ratio for Web3 AI Agents. It outputs clean, schema-validated JSON designed for AI Agents, RAG pipelines, and B2B automation workflows using only public open data.</p>
 
     <h2>How much does it cost?</h2>
     <p>Pricing is strictly Pay-Per-Event at <strong>$0.030 USD per <code>token_unlock_parsed</code></strong>. You never pay an idle monthly subscription, and compute scales automatically on Apify Cloud.</p>
@@ -47,7 +47,7 @@
 
     <h2>Sample JSON Input</h2>
     <pre>{
-  &quot;unlock_lines&quot;: &quot;ARB | 2026-12-16 | 92.6M tokens ($88.4M) | 2.6% circulating supply cliff unlock&quot;
+  &quot;token_ids&quot;: &quot;arbitrum, solana&quot;
 }</pre>
 
     <a class="cta" href="https://apify.com/veteran_steam_iyn/niche-crypto-token-unlock-mcp" target="_blank" rel="noopener">Run niche-crypto-token-unlock-mcp on Apify Store →</a>

@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Domain Email Deliverability &amp; DNS Audit Parser (MCP &amp; PPE) — Pay-Per-Event MCP Server | Neon MCP Hub</title>
-  <meta name="description" content="Structure public DNS/SPF/DKIM/DMARC records into B2B email deliverability risk flags and security score JSON. Only $0.015 per dns_audit_parsed via Apify MCP." />
+  <title>Live Domain SPF/DMARC/MX Email Deliverability Auditor (MCP) — Pay-Per-Event MCP Server | Neon MCP Hub</title>
+  <meta name="description" content="Query live DNS-over-HTTPS for any domain (e.g. stripe.com, openai.com) to audit SPF, DMARC enforcement, MX provider, and B2B email deliverability score. Only $0.015 per dns_audit_parsed via Apify MCP." />
   <link rel="canonical" href="https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-domain-whois-dns-mcp.html" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "SoftwareApplication", "name": "Domain Email Deliverability & DNS Audit Parser (MCP & PPE)", "applicationCategory": "DeveloperApplication", "operatingSystem": "Cloud / MCP", "description": "Structure public DNS/SPF/DKIM/DMARC records into B2B email deliverability risk flags and security score JSON.", "url": "https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-domain-whois-dns-mcp.html", "offers": {"@type": "Offer", "price": "0.015", "priceCurrency": "USD", "description": "Pay-Per-Event pricing: $0.015 USD per dns_audit_parsed"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does Domain Email Deliverability & DNS Audit Parser (MCP & PPE) cost?", "acceptedAnswer": {"@type": "Answer", "text": "Domain Email Deliverability & DNS Audit Parser (MCP & PPE) uses Pay-Per-Event pricing at $0.015 USD per dns_audit_parsed, with zero monthly subscription fees."}}, {"@type": "Question", "name": "How do I connect niche-domain-whois-dns-mcp to Claude Desktop or Cursor via MCP?", "acceptedAnswer": {"@type": "Answer", "text": "Add the Apify MCP Server URL https://mcp.apify.com/?actors=veteran_steam_iyn/niche-domain-whois-dns-mcp to your mcpServers JSON configuration in Claude Desktop or Cursor."}}]}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "SoftwareApplication", "name": "Live Domain SPF/DMARC/MX Email Deliverability Auditor (MCP)", "applicationCategory": "DeveloperApplication", "operatingSystem": "Cloud / MCP", "description": "Query live DNS-over-HTTPS for any domain (e.g. stripe.com, openai.com) to audit SPF, DMARC enforcement, MX provider, and B2B email deliverability score.", "url": "https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-domain-whois-dns-mcp.html", "offers": {"@type": "Offer", "price": "0.015", "priceCurrency": "USD", "description": "Pay-Per-Event pricing: $0.015 USD per dns_audit_parsed"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does Live Domain SPF/DMARC/MX Email Deliverability Auditor (MCP) cost?", "acceptedAnswer": {"@type": "Answer", "text": "Live Domain SPF/DMARC/MX Email Deliverability Auditor (MCP) uses Pay-Per-Event pricing at $0.015 USD per dns_audit_parsed, with zero monthly subscription fees."}}, {"@type": "Question", "name": "How do I connect niche-domain-whois-dns-mcp to Claude Desktop or Cursor via MCP?", "acceptedAnswer": {"@type": "Answer", "text": "Add the Apify MCP Server URL https://mcp.apify.com/?actors=veteran_steam_iyn/niche-domain-whois-dns-mcp to your mcpServers JSON configuration in Claude Desktop or Cursor."}}]}]}</script>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: #070b14; color: #e2e8f0; margin: 0; padding: 32px 20px 80px; line-height: 1.65; }
     .wrap { max-width: 820px; margin: 0 auto; }
@@ -22,7 +22,7 @@
 <body>
   <div class="wrap">
     <p><a href="../index.html">← Back to Neon MCP Hub (All 10 B2B MCP Servers)</a></p>
-    <h1>Domain Email Deliverability &amp; DNS Audit Parser (MCP &amp; PPE)</h1>
+    <h1>Live Domain SPF/DMARC/MX Email Deliverability Auditor (MCP)</h1>
     <div>
       <span class="pill">Pay-Per-Event: $0.015 / dns_audit_parsed</span>
       <span class="pill">Zero Monthly Fee</span>
@@ -30,7 +30,7 @@
     </div>
 
     <h2>What does niche-domain-whois-dns-mcp do?</h2>
-    <p>Structure public DNS/SPF/DKIM/DMARC records into B2B email deliverability risk flags and security score JSON. It outputs clean, schema-validated JSON designed for AI Agents, RAG pipelines, and B2B automation workflows using only public open data.</p>
+    <p>Query live DNS-over-HTTPS for any domain (e.g. stripe.com, openai.com) to audit SPF, DMARC enforcement, MX provider, and B2B email deliverability score. It outputs clean, schema-validated JSON designed for AI Agents, RAG pipelines, and B2B automation workflows using only public open data.</p>
 
     <h2>How much does it cost?</h2>
     <p>Pricing is strictly Pay-Per-Event at <strong>$0.015 USD per <code>dns_audit_parsed</code></strong>. You never pay an idle monthly subscription, and compute scales automatically on Apify Cloud.</p>
@@ -47,7 +47,7 @@
 
     <h2>Sample JSON Input</h2>
     <pre>{
-  &quot;dns_records&quot;: &quot;v=spf1 include:_spf.google.com ~all\nv=DMARC1; p=reject; rua=mailto:dmarc@example.com&quot;
+  &quot;domains&quot;: &quot;stripe.com, apify.com&quot;
 }</pre>
 
     <a class="cta" href="https://apify.com/veteran_steam_iyn/niche-domain-whois-dns-mcp" target="_blank" rel="noopener">Run niche-domain-whois-dns-mcp on Apify Store →</a>
