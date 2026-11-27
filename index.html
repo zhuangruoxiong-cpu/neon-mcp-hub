@@ -108,11 +108,12 @@
     <header>
       <div class="brand">
         ⚡ Neon MCP Hub
-        <span class="badge">15 Live Actors · Pay-Per-Event</span>
+        <span class="badge">20 Live Actors · Pay-Per-Event</span>
       </div>
       <nav>
-        <button class="tab-btn active" onclick="switchTab('mcp', this)">MCP Directory (15)</button>
+        <button class="tab-btn active" onclick="switchTab('mcp', this)">MCP Directory (20)</button>
         <button class="tab-btn" onclick="switchTab('invoice', this)">Free Invoice → CSV Tool</button>
+        <button class="tab-btn" onclick="switchTab('sandbox', this)">Live B2B Parser Sandbox</button>
       </nav>
     </header>
 
@@ -121,7 +122,7 @@
         <h1>Structured B2B Data MCP Servers for AI Agents</h1>
         <p>Zero monthly subscriptions. Pay strictly per structured JSON record via Apify MCP Server or SkillPay. Built for Claude Desktop, Cursor, OpenAI Agents, and enterprise automation pipelines.</p>
         <div class="stats-row">
-          <div class="stat-pill"><strong>15</strong> Live B2B MCP Actors</div>
+          <div class="stat-pill"><strong>20</strong> Live B2B MCP Actors</div>
           <div class="stat-pill"><strong>$0.005–$0.05</strong> Per Structured Event</div>
           <div class="stat-pill"><strong>100%</strong> Public Open-Data Compliant</div>
         </div>
@@ -157,6 +158,25 @@
       </div>
     </section>
 
+    <section id="tab-sandbox" class="panel">
+      <div class="hero">
+        <h1>Live B2B MCP Parser Sandbox (Try Free in Browser)</h1>
+        <p>Test our structured JSON extraction logic right here before connecting Claude Desktop, Cursor, or Apify MCP at scale.</p>
+      </div>
+      <div class="tool-box">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <button class="btn" style="flex:none;" onclick="loadSandboxPreset('sec')">SEC 10-K KPI</button>
+            <button class="btn" style="flex:none;" onclick="loadSandboxPreset('hs')">HS Code Tariff</button>
+            <button class="btn" style="flex:none;" onclick="loadSandboxPreset('rfp')">B2B RFP SLA</button>
+          </div>
+          <button class="btn primary" style="flex:none;" onclick="runSandbox()">Extract Structured JSON</button>
+        </div>
+        <textarea id="sb-input" placeholder="Click a preset above or paste public B2B text..."></textarea>
+        <pre id="sb-output" style="background:#050911; border:1px solid var(--border); border-radius:10px; padding:14px; color:#7dd3fc; overflow-x:auto; font-size:0.85rem; min-height:90px;">// Structured JSON output will appear here...</pre>
+      </div>
+    </section>
+
     <footer>
       <div>© 2026 Neon MCP Hub · Pay-Per-Event B2B Data Infrastructure</div>
       <div>
@@ -185,7 +205,12 @@
       { slug: "niche-eu-carbon-cbam-mcp", title: "EU CBAM Carbon Emission Parser", price: "$0.045 / report", event: "cbam_emission_parsed", desc: "Structure EU CBAM carbon border declarations into CN codes, embedded tCO2e intensity, and verification status." },
       { slug: "niche-b2b-rfp-compliance-mcp", title: "B2B RFP Compliance & SLA Extractor", price: "$0.050 / clause", event: "rfp_clause_extracted", desc: "Extract mandatory SOC2/ISO27001/HIPAA certifications, SLA uptime targets, and submission deadlines." },
       { slug: "niche-job-salary-comp-mcp", title: "Tech & Executive Job Salary Parser", price: "$0.020 / role", event: "job_comp_parsed", desc: "Parse public job postings into structured base salary bands, equity mentions, and remote work policy." },
-      { slug: "niche-domain-whois-dns-mcp", title: "Domain DNS & Email Deliverability Audit", price: "$0.015 / record", event: "dns_audit_parsed", desc: "Structure public SPF/DKIM/DMARC DNS records into B2B email deliverability risk flags and security scores." }
+      { slug: "niche-domain-whois-dns-mcp", title: "Domain DNS & Email Deliverability Audit", price: "$0.015 / record", event: "dns_audit_parsed", desc: "Structure public SPF/DKIM/DMARC DNS records into B2B email deliverability risk flags and security scores." },
+      { slug: "niche-patent-prior-art-mcp", title: "Patent Claims & Prior-Art Extractor", price: "$0.045 / claim", event: "patent_claim_parsed", desc: "Extract patent IDs, filing dates, claim counts, and assignee metadata from public USPTO/EPO filings." },
+      { slug: "niche-esg-scope3-vendor-mcp", title: "ESG Scope 3 Supplier Emissions Parser", price: "$0.040 / vendor", event: "esg_vendor_parsed", desc: "Parse supplier ESG disclosures into Scope 1/2/3 tCO2e emissions, net-zero targets, and SBTi status." },
+      { slug: "niche-real-estate-auction-mcp", title: "Commercial & Foreclosure Auction Parser", price: "$0.035 / lead", event: "auction_lead_parsed", desc: "Convert public county foreclosure and commercial auction notices into parcel, bid, and date JSON." },
+      { slug: "niche-appstore-churn-signal-mcp", title: "App Store Review Churn Signal Extractor", price: "$0.020 / review", event: "churn_signal_parsed", desc: "Detect cancellation intent, crash bugs, and feature gaps from public iOS/Android app reviews." },
+      { slug: "niche-crypto-token-unlock-mcp", title: "Crypto Token Unlock & DAO Parser", price: "$0.030 / event", event: "token_unlock_parsed", desc: "Parse public token vesting unlock schedules and DAO governance proposals into USD value & supply impact." }
     ];
 
     const grid = document.getElementById("actor-grid");
@@ -195,19 +220,61 @@
       card.innerHTML = `
         <div>
           <div class="card-top">
-            <h3>${a.title}</h3>
+            <h3><a href="./actors/${a.slug}.html" style="color:#fff;text-decoration:none;">${a.title}</a></h3>
             <span class="price">${a.price}</span>
           </div>
           <p>${a.desc}</p>
           <div class="meta-row">actor: veteran_steam_iyn/${a.slug}<br/>event: ${a.event}</div>
         </div>
         <div class="card-actions">
-          <a class="btn primary" href="https://apify.com/veteran_steam_iyn/${a.slug}" target="_blank" rel="noopener">Open on Apify</a>
-          <button class="btn" onclick="copyMCP('${a.slug}')">Copy MCP JSON</button>
+          <a class="btn primary" href="https://apify.com/veteran_steam_iyn/${a.slug}" target="_blank" rel="noopener">Apify Store</a>
+          <a class="btn" href="./actors/${a.slug}.html">Docs</a>
+          <button class="btn" onclick="copyMCP('${a.slug}')">MCP JSON</button>
         </div>
       `;
       grid.appendChild(card);
     });
+
+    let sbMode = "sec";
+    function loadSandboxPreset(mode) {
+      sbMode = mode;
+      const samples = {
+        sec: "ACME Cloud Corp (FY2026 10-K): Total revenue reached $412.5M (+24.3% YoY). Operating margin 18.2%. Risk note: customer concentration in top 5 enterprise accounts.",
+        hs: "Lithium Power Bank 20000mAh | 8507.60.00 | CN->US | 3.4% + Sec301\nStainless Steel Tumbler 40oz | 7323.93.00 | CN->EU | 3.2%",
+        rfp: "Vendors must hold active SOC2 Type II and ISO27001 certification. Minimum SLA: 99.95% uptime. Proposal due 2026-12-20."
+      };
+      document.getElementById("sb-input").value = samples[mode];
+      runSandbox();
+    }
+
+    function runSandbox() {
+      const txt = document.getElementById("sb-input").value.trim();
+      let res = {};
+      if (sbMode === "sec") {
+        res = {
+          actor: "veteran_steam_iyn/niche-sec-edgar-10k-kpi-mcp",
+          monetary_figures: txt.match(/\$[0-9][0-9,]*(?:\.\d+)?[MBK]?/g) || [],
+          percentage_metrics: txt.match(/[+-]?\d+(?:\.\d+)?%/g) || [],
+          risk_flag_detected: /risk|concentration|litigation/i.test(txt)
+        };
+      } else if (sbMode === "hs") {
+        res = {
+          actor: "veteran_steam_iyn/niche-customs-hscode-tariff-mcp",
+          records: txt.split(/\r?\n/).filter(Boolean).map(ln => {
+            const p = ln.split("|").map(s => s.trim());
+            return { sku: p[0], hs_code: (ln.match(/\d{4}\.\d{2}(?:\.\d{2})?/) || [p[1] || ""])[0], duty_rates: ln.match(/\d+(?:\.\d+)?%/g) || [], hazmat_flag: /lithium|battery/i.test(ln) };
+          })
+        };
+      } else {
+        res = {
+          actor: "veteran_steam_iyn/niche-b2b-rfp-compliance-mcp",
+          certifications_required: txt.match(/\b(?:SOC\s?2(?:\s+Type\s+II)?|ISO\s?27001|HIPAA|GDPR)\b/gi) || [],
+          sla_targets: txt.match(/\b99\.\d+%\b/g) || [],
+          deadlines: txt.match(/\b\d{4}-\d{2}-\d{2}\b/g) || []
+        };
+      }
+      document.getElementById("sb-output").textContent = JSON.stringify(res, null, 2);
+    }
 
     function showToast(msg) {
       const t = document.getElementById("toast");

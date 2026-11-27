@@ -1,17 +1,17 @@
-# ⚡ Neon MCP Hub — 15 Production B2B Model Context Protocol (MCP) Servers
+# ⚡ Neon MCP Hub — 20 Production B2B Model Context Protocol (MCP) Servers
 
 [![Live Portal](https://img.shields.io/badge/Live_Portal-GitHub_Pages-38bdf8?style=for-the-badge)](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/)
-[![Apify Store](https://img.shields.io/badge/Apify_Store-15_B2B_MCP_Actors-34d399?style=for-the-badge)](https://apify.com/veteran_steam_iyn)
+[![Apify Store](https://img.shields.io/badge/Apify_Store-20_B2B_MCP_Actors-34d399?style=for-the-badge)](https://apify.com/veteran_steam_iyn)
 
 > **Pay-Per-Event B2B Structured Data MCP Servers for Claude Desktop, Cursor, OpenAI Agents & RAG Pipelines.**
 > Zero monthly subscriptions. Dual-mode extraction (**Live Public URL Fetch + Direct Batch Text**). 100% public open-data compliant.
 
-🌐 **Live Portal & Free Browser-Side Invoice → CSV Tool**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/  
+🌐 **Live Portal, Interactive B2B Sandbox & Free Invoice → CSV Tool**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/  
 🤖 **Machine-Readable Agent Spec**: [`llms.txt`](./llms.txt) · [`llms-full.txt`](./llms-full.txt)
 
 ---
 
-## 15 Live B2B MCP Servers (Apify Store & SkillPay Ready)
+## 20 Live B2B MCP Servers (Apify Store & SkillPay Ready)
 
 | # | MCP Server | Category | Pricing (Pay-Per-Event) | Apify Store & Docs |
 |---|---|---|---|---|
@@ -30,6 +30,11 @@
 | 13 | `niche-b2b-rfp-compliance-mcp` | Enterprise Sales | `$0.050` / clause | [Apify](https://apify.com/veteran_steam_iyn/niche-b2b-rfp-compliance-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-b2b-rfp-compliance-mcp.html) |
 | 14 | `niche-job-salary-comp-mcp` | HR / Comp Intel | `$0.020` / role | [Apify](https://apify.com/veteran_steam_iyn/niche-job-salary-comp-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-job-salary-comp-mcp.html) |
 | 15 | `niche-domain-whois-dns-mcp` | Deliverability | `$0.015` / domain | [Apify](https://apify.com/veteran_steam_iyn/niche-domain-whois-dns-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-domain-whois-dns-mcp.html) |
+| 16 | `niche-patent-prior-art-mcp` | IP / Patents | `$0.045` / claim | [Apify](https://apify.com/veteran_steam_iyn/niche-patent-prior-art-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-patent-prior-art-mcp.html) |
+| 17 | `niche-esg-scope3-vendor-mcp` | ESG Scope 3 | `$0.040` / vendor | [Apify](https://apify.com/veteran_steam_iyn/niche-esg-scope3-vendor-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-esg-scope3-vendor-mcp.html) |
+| 18 | `niche-real-estate-auction-mcp` | Real Estate Leads | `$0.035` / parcel | [Apify](https://apify.com/veteran_steam_iyn/niche-real-estate-auction-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-real-estate-auction-mcp.html) |
+| 19 | `niche-appstore-churn-signal-mcp` | Mobile Product | `$0.020` / review | [Apify](https://apify.com/veteran_steam_iyn/niche-appstore-churn-signal-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-appstore-churn-signal-mcp.html) |
+| 20 | `niche-crypto-token-unlock-mcp` | Web3 / DAO | `$0.030` / event | [Apify](https://apify.com/veteran_steam_iyn/niche-crypto-token-unlock-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-crypto-token-unlock-mcp.html) |
 
 ## Quick MCP Integration (Claude Desktop / Cursor)
 

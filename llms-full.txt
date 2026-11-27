@@ -92,3 +92,33 @@
 - **Pricing**: `$0.015` USD per `dns_audit_parsed` (Pay-Per-Event, no subscription)
 - **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-domain-whois-dns-mcp`
 - **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-domain-whois-dns-mcp.html
+
+## Patent Claims & Prior-Art Structured Extractor (MCP & PPE) (`veteran_steam_iyn/niche-patent-prior-art-mcp`)
+- **Direct Answer**: Extract patent numbers, filing dates, independent claim counts, and assignee metadata from public patent filings for IP AI Agents.
+- **Pricing**: `$0.045` USD per `patent_claim_parsed` (Pay-Per-Event, no subscription)
+- **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-patent-prior-art-mcp`
+- **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-patent-prior-art-mcp.html
+
+## ESG Scope 3 Supplier Emissions Parser (MCP & PPE) (`veteran_steam_iyn/niche-esg-scope3-vendor-mcp`)
+- **Direct Answer**: Parse public supplier ESG disclosures into Scope 1/2/3 tCO2e emissions, net-zero target year, and SBTi verification status JSON.
+- **Pricing**: `$0.040` USD per `esg_vendor_parsed` (Pay-Per-Event, no subscription)
+- **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-esg-scope3-vendor-mcp`
+- **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-esg-scope3-vendor-mcp.html
+
+## Commercial & Foreclosure Auction Lead Parser (MCP & PPE) (`veteran_steam_iyn/niche-real-estate-auction-mcp`)
+- **Direct Answer**: Structure public county foreclosure and commercial real estate auction notices into opening bid, auction date, and parcel JSON.
+- **Pricing**: `$0.035` USD per `auction_lead_parsed` (Pay-Per-Event, no subscription)
+- **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-real-estate-auction-mcp`
+- **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-real-estate-auction-mcp.html
+
+## App Store & Play Review Churn Signal Extractor (MCP & PPE) (`veteran_steam_iyn/niche-appstore-churn-signal-mcp`)
+- **Direct Answer**: Detect cancellation intent, crash bugs, billing complaints, and feature gaps from public mobile app reviews for product AI Agents.
+- **Pricing**: `$0.020` USD per `churn_signal_parsed` (Pay-Per-Event, no subscription)
+- **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-appstore-churn-signal-mcp`
+- **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-appstore-churn-signal-mcp.html
+
+## Crypto Token Unlock & DAO Proposal Parser (MCP & PPE) (`veteran_steam_iyn/niche-crypto-token-unlock-mcp`)
+- **Direct Answer**: Parse public token vesting unlock schedules and DAO governance proposals into unlock date, USD value, and supply-impact JSON.
+- **Pricing**: `$0.030` USD per `token_unlock_parsed` (Pay-Per-Event, no subscription)
+- **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-crypto-token-unlock-mcp`
+- **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-crypto-token-unlock-mcp.html
