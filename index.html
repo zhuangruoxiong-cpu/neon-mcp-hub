@@ -108,10 +108,10 @@
     <header>
       <div class="brand">
         ⚡ Neon MCP Hub
-        <span class="badge">10 Live Actors · Pay-Per-Event</span>
+        <span class="badge">15 Live Actors · Pay-Per-Event</span>
       </div>
       <nav>
-        <button class="tab-btn active" onclick="switchTab('mcp', this)">MCP Directory (10)</button>
+        <button class="tab-btn active" onclick="switchTab('mcp', this)">MCP Directory (15)</button>
         <button class="tab-btn" onclick="switchTab('invoice', this)">Free Invoice → CSV Tool</button>
       </nav>
     </header>
@@ -121,7 +121,7 @@
         <h1>Structured B2B Data MCP Servers for AI Agents</h1>
         <p>Zero monthly subscriptions. Pay strictly per structured JSON record via Apify MCP Server or SkillPay. Built for Claude Desktop, Cursor, OpenAI Agents, and enterprise automation pipelines.</p>
         <div class="stats-row">
-          <div class="stat-pill"><strong>10</strong> Live B2B MCP Actors</div>
+          <div class="stat-pill"><strong>15</strong> Live B2B MCP Actors</div>
           <div class="stat-pill"><strong>$0.005–$0.05</strong> Per Structured Event</div>
           <div class="stat-pill"><strong>100%</strong> Public Open-Data Compliant</div>
         </div>
@@ -161,6 +161,7 @@
       <div>© 2026 Neon MCP Hub · Pay-Per-Event B2B Data Infrastructure</div>
       <div>
         <a href="./llms.txt">llms.txt</a> ·
+        <a href="./llms-full.txt">llms-full.txt</a> ·
         <a href="https://apify.com/veteran_steam_iyn" target="_blank" rel="noopener">Apify Developer Profile</a>
       </div>
     </footer>
@@ -170,7 +171,7 @@
 
   <script>
     const ACTORS = [
-      { slug: "niche-tradeshow-exhibitor-mcp", title: "Trade Show Exhibitor Extractor", price: "$0.015 / record", event: "exhibitor_record_extracted", desc: "Extract structured B2B exhibitor lists (company, booth, category, website) from public trade show directories." },
+      { slug: "niche-tradeshow-exhibitor-mcp", title: "Trade Show Exhibitor Extractor", price: "$0.015 / record", event: "exhibitor_record_extracted", desc: "Extract structured B2B exhibitor lists (company, booth, category, website) from public URLs or directories." },
       { slug: "niche-crossborder-review-cleaner", title: "E-Commerce Review Defect Cleaner", price: "$0.005 / review", event: "review_cleaned", desc: "Normalize Amazon/Shopify product reviews into structured defect tags and sentiment scores." },
       { slug: "niche-public-tender-patent-mcp", title: "Public Tender & Patent Parser", price: "$0.050 / notice", event: "tender_parsed", desc: "Parse government procurement RFPs and patent grant notices into budgets, deadlines, and clean JSON." },
       { slug: "niche-saas-pricing-table-mcp", title: "B2B SaaS Pricing Tier Extractor", price: "$0.020 / tier", event: "pricing_tier_extracted", desc: "Structure SaaS pricing pages into plan name, monthly price, and seat limits for competitive intel." },
@@ -179,7 +180,12 @@
       { slug: "niche-sec-edgar-10k-kpi-mcp", title: "SEC EDGAR 10-K/8-K KPI Extractor", price: "$0.045 / filing", event: "sec_filing_kpi_parsed", desc: "Extract revenue figures, YoY percentages, margins, and risk flags from public SEC filing excerpts." },
       { slug: "niche-customs-hscode-tariff-mcp", title: "Customs HS Code & Tariff Parser", price: "$0.035 / SKU", event: "hscode_tariff_parsed", desc: "Parse cross-border SKU descriptions into HS codes, duty rates, and lithium/hazmat compliance flags." },
       { slug: "niche-saas-changelog-diff-mcp", title: "SaaS Changelog & Release Parser", price: "$0.015 / entry", event: "changelog_entry_parsed", desc: "Structure SaaS release notes into version, date, security-fix, and breaking-change flags." },
-      { slug: "niche-freight-bol-manifest-mcp", title: "Freight BOL & Manifest Parser", price: "$0.040 / BOL", event: "bol_manifest_parsed", desc: "Parse ocean freight bill-of-lading rows into shipper, consignee, port pair, TEU container, and weight." }
+      { slug: "niche-freight-bol-manifest-mcp", title: "Freight BOL & Manifest Parser", price: "$0.040 / BOL", event: "bol_manifest_parsed", desc: "Parse ocean freight bill-of-lading rows into shipper, consignee, port pair, TEU container, and weight." },
+      { slug: "niche-fda-drug-recall-mcp", title: "FDA & Food/Pharma Recall Parser", price: "$0.035 / notice", event: "recall_notice_parsed", desc: "Parse public FDA/USDA recall notices into lot numbers, recall class, and supply-chain risk flags." },
+      { slug: "niche-eu-carbon-cbam-mcp", title: "EU CBAM Carbon Emission Parser", price: "$0.045 / report", event: "cbam_emission_parsed", desc: "Structure EU CBAM carbon border declarations into CN codes, embedded tCO2e intensity, and verification status." },
+      { slug: "niche-b2b-rfp-compliance-mcp", title: "B2B RFP Compliance & SLA Extractor", price: "$0.050 / clause", event: "rfp_clause_extracted", desc: "Extract mandatory SOC2/ISO27001/HIPAA certifications, SLA uptime targets, and submission deadlines." },
+      { slug: "niche-job-salary-comp-mcp", title: "Tech & Executive Job Salary Parser", price: "$0.020 / role", event: "job_comp_parsed", desc: "Parse public job postings into structured base salary bands, equity mentions, and remote work policy." },
+      { slug: "niche-domain-whois-dns-mcp", title: "Domain DNS & Email Deliverability Audit", price: "$0.015 / record", event: "dns_audit_parsed", desc: "Structure public SPF/DKIM/DMARC DNS records into B2B email deliverability risk flags and security scores." }
     ];
 
     const grid = document.getElementById("actor-grid");
