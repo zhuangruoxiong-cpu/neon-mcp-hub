@@ -27,8 +27,8 @@
 - **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-saas-pricing-table-mcp`
 - **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-saas-pricing-table-mcp.html
 
-## Public Clinical Trial & Research Grant Structured Parser (MCP & PPE) (`veteran_steam_iyn/niche-clinical-trial-grant-mcp`)
-- **Direct Answer**: Structure public NIH/EU clinical trial & academic grant notices into phase, sponsor, award amount, and recruiting status JSON.
+## ClinicalTrials.gov v2 Live Study & Grant Extractor (MCP) (`veteran_steam_iyn/niche-clinical-trial-grant-mcp`)
+- **Direct Answer**: Query live ClinicalTrials.gov v2 API by condition, drug, or sponsor and return clean NCT ID, phase, recruiting status, and study URL JSON for AI Agents.
 - **Pricing**: `$0.030` USD per `grant_record_parsed` (Pay-Per-Event, no subscription)
 - **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-clinical-trial-grant-mcp`
 - **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-clinical-trial-grant-mcp.html
@@ -39,8 +39,8 @@
 - **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-commercial-permit-lead-mcp`
 - **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-commercial-permit-lead-mcp.html
 
-## SEC EDGAR 10-K/8-K Financial KPI Extractor (MCP & PPE) (`veteran_steam_iyn/niche-sec-edgar-10k-kpi-mcp`)
-- **Direct Answer**: Extract structured revenue, YoY growth, guidance, and risk flags from public SEC 10-K/10-Q/8-K filing excerpts for FinTech AI Agents.
+## SEC EDGAR Live 10-K/10-Q/8-K Filings Extractor (MCP) (`veteran_steam_iyn/niche-sec-edgar-10k-kpi-mcp`)
+- **Direct Answer**: Query live SEC EDGAR official API by US ticker (AAPL, NVDA, MSFT, TSLA) or CIK and return clean 10-K/10-Q/8-K filing URLs, dates, and KPIs JSON.
 - **Pricing**: `$0.045` USD per `sec_filing_kpi_parsed` (Pay-Per-Event, no subscription)
 - **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-sec-edgar-10k-kpi-mcp`
 - **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-sec-edgar-10k-kpi-mcp.html
@@ -63,8 +63,8 @@
 - **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-freight-bol-manifest-mcp`
 - **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-freight-bol-manifest-mcp.html
 
-## FDA & Food/Pharma Recall Notice Parser (MCP & PPE) (`veteran_steam_iyn/niche-fda-drug-recall-mcp`)
-- **Direct Answer**: Parse public FDA/USDA recall notices into lot numbers, recall class, product name, and risk flags JSON for supply-chain AI Agents.
+## OpenFDA Live Drug & Food Recall Extractor (MCP & PPE) (`veteran_steam_iyn/niche-fda-drug-recall-mcp`)
+- **Direct Answer**: Query live official OpenFDA Enforcement API for drug or food recalls and return recall class, firm, lot/product details, and reason JSON.
 - **Pricing**: `$0.035` USD per `recall_notice_parsed` (Pay-Per-Event, no subscription)
 - **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-fda-drug-recall-mcp`
 - **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-fda-drug-recall-mcp.html

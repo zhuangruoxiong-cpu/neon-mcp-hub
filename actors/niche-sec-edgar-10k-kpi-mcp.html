@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SEC EDGAR 10-K/8-K Financial KPI Extractor (MCP &amp; PPE) — Pay-Per-Event MCP Server | Neon MCP Hub</title>
-  <meta name="description" content="Extract structured revenue, YoY growth, guidance, and risk flags from public SEC 10-K/10-Q/8-K filing excerpts for FinTech AI Agents. Only $0.045 per sec_filing_kpi_parsed via Apify MCP." />
+  <title>SEC EDGAR Live 10-K/10-Q/8-K Filings Extractor (MCP) — Pay-Per-Event MCP Server | Neon MCP Hub</title>
+  <meta name="description" content="Query live SEC EDGAR official API by US ticker (AAPL, NVDA, MSFT, TSLA) or CIK and return clean 10-K/10-Q/8-K filing URLs, dates, and KPIs JSON. Only $0.045 per sec_filing_kpi_parsed via Apify MCP." />
   <link rel="canonical" href="https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-sec-edgar-10k-kpi-mcp.html" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "SoftwareApplication", "name": "SEC EDGAR 10-K/8-K Financial KPI Extractor (MCP & PPE)", "applicationCategory": "DeveloperApplication", "operatingSystem": "Cloud / MCP", "description": "Extract structured revenue, YoY growth, guidance, and risk flags from public SEC 10-K/10-Q/8-K filing excerpts for FinTech AI Agents.", "url": "https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-sec-edgar-10k-kpi-mcp.html", "offers": {"@type": "Offer", "price": "0.045", "priceCurrency": "USD", "description": "Pay-Per-Event pricing: $0.045 USD per sec_filing_kpi_parsed"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does SEC EDGAR 10-K/8-K Financial KPI Extractor (MCP & PPE) cost?", "acceptedAnswer": {"@type": "Answer", "text": "SEC EDGAR 10-K/8-K Financial KPI Extractor (MCP & PPE) uses Pay-Per-Event pricing at $0.045 USD per sec_filing_kpi_parsed, with zero monthly subscription fees."}}, {"@type": "Question", "name": "How do I connect niche-sec-edgar-10k-kpi-mcp to Claude Desktop or Cursor via MCP?", "acceptedAnswer": {"@type": "Answer", "text": "Add the Apify MCP Server URL https://mcp.apify.com/?actors=veteran_steam_iyn/niche-sec-edgar-10k-kpi-mcp to your mcpServers JSON configuration in Claude Desktop or Cursor."}}]}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "SoftwareApplication", "name": "SEC EDGAR Live 10-K/10-Q/8-K Filings Extractor (MCP)", "applicationCategory": "DeveloperApplication", "operatingSystem": "Cloud / MCP", "description": "Query live SEC EDGAR official API by US ticker (AAPL, NVDA, MSFT, TSLA) or CIK and return clean 10-K/10-Q/8-K filing URLs, dates, and KPIs JSON.", "url": "https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-sec-edgar-10k-kpi-mcp.html", "offers": {"@type": "Offer", "price": "0.045", "priceCurrency": "USD", "description": "Pay-Per-Event pricing: $0.045 USD per sec_filing_kpi_parsed"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does SEC EDGAR Live 10-K/10-Q/8-K Filings Extractor (MCP) cost?", "acceptedAnswer": {"@type": "Answer", "text": "SEC EDGAR Live 10-K/10-Q/8-K Filings Extractor (MCP) uses Pay-Per-Event pricing at $0.045 USD per sec_filing_kpi_parsed, with zero monthly subscription fees."}}, {"@type": "Question", "name": "How do I connect niche-sec-edgar-10k-kpi-mcp to Claude Desktop or Cursor via MCP?", "acceptedAnswer": {"@type": "Answer", "text": "Add the Apify MCP Server URL https://mcp.apify.com/?actors=veteran_steam_iyn/niche-sec-edgar-10k-kpi-mcp to your mcpServers JSON configuration in Claude Desktop or Cursor."}}]}]}</script>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: #070b14; color: #e2e8f0; margin: 0; padding: 32px 20px 80px; line-height: 1.65; }
     .wrap { max-width: 820px; margin: 0 auto; }
@@ -22,7 +22,7 @@
 <body>
   <div class="wrap">
     <p><a href="../index.html">← Back to Neon MCP Hub (All 10 B2B MCP Servers)</a></p>
-    <h1>SEC EDGAR 10-K/8-K Financial KPI Extractor (MCP &amp; PPE)</h1>
+    <h1>SEC EDGAR Live 10-K/10-Q/8-K Filings Extractor (MCP)</h1>
     <div>
       <span class="pill">Pay-Per-Event: $0.045 / sec_filing_kpi_parsed</span>
       <span class="pill">Zero Monthly Fee</span>
@@ -30,7 +30,7 @@
     </div>
 
     <h2>What does niche-sec-edgar-10k-kpi-mcp do?</h2>
-    <p>Extract structured revenue, YoY growth, guidance, and risk flags from public SEC 10-K/10-Q/8-K filing excerpts for FinTech AI Agents. It outputs clean, schema-validated JSON designed for AI Agents, RAG pipelines, and B2B automation workflows using only public open data.</p>
+    <p>Query live SEC EDGAR official API by US ticker (AAPL, NVDA, MSFT, TSLA) or CIK and return clean 10-K/10-Q/8-K filing URLs, dates, and KPIs JSON. It outputs clean, schema-validated JSON designed for AI Agents, RAG pipelines, and B2B automation workflows using only public open data.</p>
 
     <h2>How much does it cost?</h2>
     <p>Pricing is strictly Pay-Per-Event at <strong>$0.045 USD per <code>sec_filing_kpi_parsed</code></strong>. You never pay an idle monthly subscription, and compute scales automatically on Apify Cloud.</p>
@@ -47,7 +47,7 @@
 
     <h2>Sample JSON Input</h2>
     <pre>{
-  &quot;filing_excerpt&quot;: &quot;ACME Cloud Corp (FY2026 10-K): Total revenue reached $412.5M (+24.3% YoY). Operating margin 18.2%. Risk note: customer concentration in top 5 enterprise accounts.&quot;
+  &quot;ticker_or_cik&quot;: &quot;AAPL&quot;
 }</pre>
 
     <a class="cta" href="https://apify.com/veteran_steam_iyn/niche-sec-edgar-10k-kpi-mcp" target="_blank" rel="noopener">Run niche-sec-edgar-10k-kpi-mcp on Apify Store →</a>

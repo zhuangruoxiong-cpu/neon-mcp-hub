@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Public Clinical Trial &amp; Research Grant Structured Parser (MCP &amp; PPE) — Pay-Per-Event MCP Server | Neon MCP Hub</title>
-  <meta name="description" content="Structure public NIH/EU clinical trial &amp; academic grant notices into phase, sponsor, award amount, and recruiting status JSON. Only $0.030 per grant_record_parsed via Apify MCP." />
+  <title>ClinicalTrials.gov v2 Live Study &amp; Grant Extractor (MCP) — Pay-Per-Event MCP Server | Neon MCP Hub</title>
+  <meta name="description" content="Query live ClinicalTrials.gov v2 API by condition, drug, or sponsor and return clean NCT ID, phase, recruiting status, and study URL JSON for AI Agents. Only $0.030 per grant_record_parsed via Apify MCP." />
   <link rel="canonical" href="https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-clinical-trial-grant-mcp.html" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "SoftwareApplication", "name": "Public Clinical Trial & Research Grant Structured Parser (MCP & PPE)", "applicationCategory": "DeveloperApplication", "operatingSystem": "Cloud / MCP", "description": "Structure public NIH/EU clinical trial & academic grant notices into phase, sponsor, award amount, and recruiting status JSON.", "url": "https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-clinical-trial-grant-mcp.html", "offers": {"@type": "Offer", "price": "0.030", "priceCurrency": "USD", "description": "Pay-Per-Event pricing: $0.030 USD per grant_record_parsed"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does Public Clinical Trial & Research Grant Structured Parser (MCP & PPE) cost?", "acceptedAnswer": {"@type": "Answer", "text": "Public Clinical Trial & Research Grant Structured Parser (MCP & PPE) uses Pay-Per-Event pricing at $0.030 USD per grant_record_parsed, with zero monthly subscription fees."}}, {"@type": "Question", "name": "How do I connect niche-clinical-trial-grant-mcp to Claude Desktop or Cursor via MCP?", "acceptedAnswer": {"@type": "Answer", "text": "Add the Apify MCP Server URL https://mcp.apify.com/?actors=veteran_steam_iyn/niche-clinical-trial-grant-mcp to your mcpServers JSON configuration in Claude Desktop or Cursor."}}]}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "SoftwareApplication", "name": "ClinicalTrials.gov v2 Live Study & Grant Extractor (MCP)", "applicationCategory": "DeveloperApplication", "operatingSystem": "Cloud / MCP", "description": "Query live ClinicalTrials.gov v2 API by condition, drug, or sponsor and return clean NCT ID, phase, recruiting status, and study URL JSON for AI Agents.", "url": "https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-clinical-trial-grant-mcp.html", "offers": {"@type": "Offer", "price": "0.030", "priceCurrency": "USD", "description": "Pay-Per-Event pricing: $0.030 USD per grant_record_parsed"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does ClinicalTrials.gov v2 Live Study & Grant Extractor (MCP) cost?", "acceptedAnswer": {"@type": "Answer", "text": "ClinicalTrials.gov v2 Live Study & Grant Extractor (MCP) uses Pay-Per-Event pricing at $0.030 USD per grant_record_parsed, with zero monthly subscription fees."}}, {"@type": "Question", "name": "How do I connect niche-clinical-trial-grant-mcp to Claude Desktop or Cursor via MCP?", "acceptedAnswer": {"@type": "Answer", "text": "Add the Apify MCP Server URL https://mcp.apify.com/?actors=veteran_steam_iyn/niche-clinical-trial-grant-mcp to your mcpServers JSON configuration in Claude Desktop or Cursor."}}]}]}</script>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: #070b14; color: #e2e8f0; margin: 0; padding: 32px 20px 80px; line-height: 1.65; }
     .wrap { max-width: 820px; margin: 0 auto; }
@@ -22,7 +22,7 @@
 <body>
   <div class="wrap">
     <p><a href="../index.html">← Back to Neon MCP Hub (All 10 B2B MCP Servers)</a></p>
-    <h1>Public Clinical Trial &amp; Research Grant Structured Parser (MCP &amp; PPE)</h1>
+    <h1>ClinicalTrials.gov v2 Live Study &amp; Grant Extractor (MCP)</h1>
     <div>
       <span class="pill">Pay-Per-Event: $0.030 / grant_record_parsed</span>
       <span class="pill">Zero Monthly Fee</span>
@@ -30,7 +30,7 @@
     </div>
 
     <h2>What does niche-clinical-trial-grant-mcp do?</h2>
-    <p>Structure public NIH/EU clinical trial &amp; academic grant notices into phase, sponsor, award amount, and recruiting status JSON. It outputs clean, schema-validated JSON designed for AI Agents, RAG pipelines, and B2B automation workflows using only public open data.</p>
+    <p>Query live ClinicalTrials.gov v2 API by condition, drug, or sponsor and return clean NCT ID, phase, recruiting status, and study URL JSON for AI Agents. It outputs clean, schema-validated JSON designed for AI Agents, RAG pipelines, and B2B automation workflows using only public open data.</p>
 
     <h2>How much does it cost?</h2>
     <p>Pricing is strictly Pay-Per-Event at <strong>$0.030 USD per <code>grant_record_parsed</code></strong>. You never pay an idle monthly subscription, and compute scales automatically on Apify Cloud.</p>
@@ -47,7 +47,7 @@
 
     <h2>Sample JSON Input</h2>
     <pre>{
-  &quot;grant_text&quot;: &quot;NCT06123456 | Phase 2 Oncology Biomarker Study | Sponsor: BioLab Foundation | Award: $1,250,000 | Status: Recruiting&quot;
+  &quot;search_query&quot;: &quot;oncology biomarker&quot;
 }</pre>
 
     <a class="cta" href="https://apify.com/veteran_steam_iyn/niche-clinical-trial-grant-mcp" target="_blank" rel="noopener">Run niche-clinical-trial-grant-mcp on Apify Store →</a>

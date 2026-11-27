@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FDA &amp; Food/Pharma Recall Notice Parser (MCP &amp; PPE) — Pay-Per-Event MCP Server | Neon MCP Hub</title>
-  <meta name="description" content="Parse public FDA/USDA recall notices into lot numbers, recall class, product name, and risk flags JSON for supply-chain AI Agents. Only $0.035 per recall_notice_parsed via Apify MCP." />
+  <title>OpenFDA Live Drug &amp; Food Recall Extractor (MCP &amp; PPE) — Pay-Per-Event MCP Server | Neon MCP Hub</title>
+  <meta name="description" content="Query live official OpenFDA Enforcement API for drug or food recalls and return recall class, firm, lot/product details, and reason JSON. Only $0.035 per recall_notice_parsed via Apify MCP." />
   <link rel="canonical" href="https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-fda-drug-recall-mcp.html" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "SoftwareApplication", "name": "FDA & Food/Pharma Recall Notice Parser (MCP & PPE)", "applicationCategory": "DeveloperApplication", "operatingSystem": "Cloud / MCP", "description": "Parse public FDA/USDA recall notices into lot numbers, recall class, product name, and risk flags JSON for supply-chain AI Agents.", "url": "https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-fda-drug-recall-mcp.html", "offers": {"@type": "Offer", "price": "0.035", "priceCurrency": "USD", "description": "Pay-Per-Event pricing: $0.035 USD per recall_notice_parsed"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does FDA & Food/Pharma Recall Notice Parser (MCP & PPE) cost?", "acceptedAnswer": {"@type": "Answer", "text": "FDA & Food/Pharma Recall Notice Parser (MCP & PPE) uses Pay-Per-Event pricing at $0.035 USD per recall_notice_parsed, with zero monthly subscription fees."}}, {"@type": "Question", "name": "How do I connect niche-fda-drug-recall-mcp to Claude Desktop or Cursor via MCP?", "acceptedAnswer": {"@type": "Answer", "text": "Add the Apify MCP Server URL https://mcp.apify.com/?actors=veteran_steam_iyn/niche-fda-drug-recall-mcp to your mcpServers JSON configuration in Claude Desktop or Cursor."}}]}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "SoftwareApplication", "name": "OpenFDA Live Drug & Food Recall Extractor (MCP & PPE)", "applicationCategory": "DeveloperApplication", "operatingSystem": "Cloud / MCP", "description": "Query live official OpenFDA Enforcement API for drug or food recalls and return recall class, firm, lot/product details, and reason JSON.", "url": "https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-fda-drug-recall-mcp.html", "offers": {"@type": "Offer", "price": "0.035", "priceCurrency": "USD", "description": "Pay-Per-Event pricing: $0.035 USD per recall_notice_parsed"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does OpenFDA Live Drug & Food Recall Extractor (MCP & PPE) cost?", "acceptedAnswer": {"@type": "Answer", "text": "OpenFDA Live Drug & Food Recall Extractor (MCP & PPE) uses Pay-Per-Event pricing at $0.035 USD per recall_notice_parsed, with zero monthly subscription fees."}}, {"@type": "Question", "name": "How do I connect niche-fda-drug-recall-mcp to Claude Desktop or Cursor via MCP?", "acceptedAnswer": {"@type": "Answer", "text": "Add the Apify MCP Server URL https://mcp.apify.com/?actors=veteran_steam_iyn/niche-fda-drug-recall-mcp to your mcpServers JSON configuration in Claude Desktop or Cursor."}}]}]}</script>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: #070b14; color: #e2e8f0; margin: 0; padding: 32px 20px 80px; line-height: 1.65; }
     .wrap { max-width: 820px; margin: 0 auto; }
@@ -22,7 +22,7 @@
 <body>
   <div class="wrap">
     <p><a href="../index.html">← Back to Neon MCP Hub (All 10 B2B MCP Servers)</a></p>
-    <h1>FDA &amp; Food/Pharma Recall Notice Parser (MCP &amp; PPE)</h1>
+    <h1>OpenFDA Live Drug &amp; Food Recall Extractor (MCP &amp; PPE)</h1>
     <div>
       <span class="pill">Pay-Per-Event: $0.035 / recall_notice_parsed</span>
       <span class="pill">Zero Monthly Fee</span>
@@ -30,7 +30,7 @@
     </div>
 
     <h2>What does niche-fda-drug-recall-mcp do?</h2>
-    <p>Parse public FDA/USDA recall notices into lot numbers, recall class, product name, and risk flags JSON for supply-chain AI Agents. It outputs clean, schema-validated JSON designed for AI Agents, RAG pipelines, and B2B automation workflows using only public open data.</p>
+    <p>Query live official OpenFDA Enforcement API for drug or food recalls and return recall class, firm, lot/product details, and reason JSON. It outputs clean, schema-validated JSON designed for AI Agents, RAG pipelines, and B2B automation workflows using only public open data.</p>
 
     <h2>How much does it cost?</h2>
     <p>Pricing is strictly Pay-Per-Event at <strong>$0.035 USD per <code>recall_notice_parsed</code></strong>. You never pay an idle monthly subscription, and compute scales automatically on Apify Cloud.</p>
@@ -47,7 +47,7 @@
 
     <h2>Sample JSON Input</h2>
     <pre>{
-  &quot;recall_text&quot;: &quot;Class I Recall | Lot #L2026-884A | Organic Almond Butter 16oz | Reason: Undeclared peanut allergen | Distributed nationwide&quot;
+  &quot;category&quot;: &quot;drug&quot;
 }</pre>
 
     <a class="cta" href="https://apify.com/veteran_steam_iyn/niche-fda-drug-recall-mcp" target="_blank" rel="noopener">Run niche-fda-drug-recall-mcp on Apify Store →</a>
