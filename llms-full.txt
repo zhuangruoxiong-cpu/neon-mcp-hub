@@ -62,3 +62,33 @@
 - **Pricing**: `$0.040` USD per `bol_manifest_parsed` (Pay-Per-Event, no subscription)
 - **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-freight-bol-manifest-mcp`
 - **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-freight-bol-manifest-mcp.html
+
+## FDA & Food/Pharma Recall Notice Parser (MCP & PPE) (`veteran_steam_iyn/niche-fda-drug-recall-mcp`)
+- **Direct Answer**: Parse public FDA/USDA recall notices into lot numbers, recall class, product name, and risk flags JSON for supply-chain AI Agents.
+- **Pricing**: `$0.035` USD per `recall_notice_parsed` (Pay-Per-Event, no subscription)
+- **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-fda-drug-recall-mcp`
+- **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-fda-drug-recall-mcp.html
+
+## EU CBAM Carbon Border Emission Parser (MCP & PPE) (`veteran_steam_iyn/niche-eu-carbon-cbam-mcp`)
+- **Direct Answer**: Structure EU CBAM carbon border adjustment declarations into CN code, embedded tCO2e intensity, and compliance status JSON.
+- **Pricing**: `$0.045` USD per `cbam_emission_parsed` (Pay-Per-Event, no subscription)
+- **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-eu-carbon-cbam-mcp`
+- **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-eu-carbon-cbam-mcp.html
+
+## B2B RFP Compliance & SLA Clause Extractor (MCP & PPE) (`veteran_steam_iyn/niche-b2b-rfp-compliance-mcp`)
+- **Direct Answer**: Extract mandatory security certifications (SOC2/ISO27001), SLA uptime guarantees, and deadlines from public B2B RFP documents.
+- **Pricing**: `$0.050` USD per `rfp_clause_extracted` (Pay-Per-Event, no subscription)
+- **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-b2b-rfp-compliance-mcp`
+- **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-b2b-rfp-compliance-mcp.html
+
+## Tech & Executive Job Salary Band Parser (MCP & PPE) (`veteran_steam_iyn/niche-job-salary-comp-mcp`)
+- **Direct Answer**: Parse public job postings into structured base salary range, equity mention, remote work policy, and core tech stack JSON.
+- **Pricing**: `$0.020` USD per `job_comp_parsed` (Pay-Per-Event, no subscription)
+- **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-job-salary-comp-mcp`
+- **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-job-salary-comp-mcp.html
+
+## Domain Email Deliverability & DNS Audit Parser (MCP & PPE) (`veteran_steam_iyn/niche-domain-whois-dns-mcp`)
+- **Direct Answer**: Structure public DNS/SPF/DKIM/DMARC records into B2B email deliverability risk flags and security score JSON.
+- **Pricing**: `$0.015` USD per `dns_audit_parsed` (Pay-Per-Event, no subscription)
+- **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-domain-whois-dns-mcp`
+- **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-domain-whois-dns-mcp.html
