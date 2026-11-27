@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon MCP Hub — 10 Pay-Per-Event B2B AI Agent MCP Servers & Free Invoice-to-CSV Tool</title>
+  <meta name="description" content="10 production-ready B2B Model Context Protocol (MCP) servers on Apify Store & SkillPay, plus a free client-side Invoice/PO to CSV converter." />
+  <style>
+    :root {
+      --bg: #070b14;
+      --surface: #0f172a;
+      --surface-2: #162033;
+      --border: #1e293b;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-2: #818cf8;
+      --green: #34d399;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(circle at top right, #111c36, var(--bg) 55%);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    .container { max-width: 1120px; margin: 0 auto; padding: 28px 20px 80px; }
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding-bottom: 24px; border-bottom: 1px solid var(--border); flex-wrap: wrap; gap: 16px;
+    }
+    .brand { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; display: flex; align-items: center; gap: 10px; }
+    .badge {
+      font-size: 0.72rem; font-weight: 600; padding: 3px 9px; border-radius: 999px;
+      background: rgba(52, 211, 153, 0.14); color: var(--green); border: 1px solid rgba(52, 211, 153, 0.3);
+    }
+    nav { display: flex; gap: 10px; }
+    .tab-btn {
+      background: var(--surface); color: var(--muted); border: 1px solid var(--border);
+      padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.9rem;
+      transition: all 0.15s ease;
+    }
+    .tab-btn.active, .tab-btn:hover { color: #fff; border-color: var(--accent); background: rgba(56, 189, 248, 0.12); }
+    .hero { padding: 44px 0 32px; max-width: 780px; }
+    .hero h1 {
+      font-size: clamp(1.9rem, 4vw, 2.85rem); line-height: 1.18; font-weight: 800; letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #fff 20%, var(--accent) 70%, var(--accent-2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 14px;
+    }
+    .hero p { color: var(--muted); font-size: 1.05rem; margin-bottom: 20px; }
+    .stats-row { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 28px; }
+    .stat-pill {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+      padding: 10px 16px; font-size: 0.88rem; color: var(--muted);
+    }
+    .stat-pill strong { color: #fff; font-size: 1rem; margin-right: 4px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+    .card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+      padding: 20px; display: flex; flex-direction: column; justify-content: space-between;
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+    .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+    .card h3 { font-size: 1.02rem; font-weight: 700; color: #fff; }
+    .price {
+      font-size: 0.78rem; font-weight: 700; white-space: nowrap; padding: 3px 8px; border-radius: 6px;
+      background: rgba(56, 189, 248, 0.14); color: var(--accent);
+    }
+    .card p { font-size: 0.88rem; color: var(--muted); margin-bottom: 14px; }
+    .meta-row { font-size: 0.78rem; color: #64748b; font-family: ui-monospace, SFMono-Regular, monospace; margin-bottom: 14px; }
+    .card-actions { display: flex; gap: 8px; }
+    .btn {
+      flex: 1; text-align: center; text-decoration: none; font-size: 0.84rem; font-weight: 600;
+      padding: 8px 12px; border-radius: 8px; cursor: pointer; border: 1px solid var(--border);
+      background: var(--surface-2); color: var(--text); transition: all 0.15s ease;
+    }
+    .btn.primary { background: linear-gradient(135deg, #0284c7, #4f46e5); border-color: transparent; color: #fff; }
+    .btn:hover { opacity: 0.92; border-color: var(--accent); }
+    .panel { display: none; }
+    .panel.active { display: block; }
+    .tool-box {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px;
+    }
+    textarea {
+      width: 100%; min-height: 170px; background: #050911; color: #e2e8f0; border: 1px solid var(--border);
+      border-radius: 10px; padding: 14px; font-family: ui-monospace, SFMono-Regular, monospace; font-size: 0.88rem;
+      margin: 12px 0 16px; resize: vertical;
+    }
+    table { width: 100%; border-collapse: collapse; margin-top: 18px; font-size: 0.88rem; }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+    th { color: var(--muted); font-weight: 600; background: rgba(255,255,255,0.02); }
+    .toast {
+      position: fixed; bottom: 24px; right: 24px; background: #0f172a; color: var(--green);
+      border: 1px solid var(--green); padding: 10px 16px; border-radius: 10px; font-size: 0.88rem;
+      display: none; z-index: 99;
+    }
+    footer {
+      margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border);
+      color: #64748b; font-size: 0.84rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        ⚡ Neon MCP Hub
+        <span class="badge">10 Live Actors · Pay-Per-Event</span>
+      </div>
+      <nav>
+        <button class="tab-btn active" onclick="switchTab('mcp', this)">MCP Directory (10)</button>
+        <button class="tab-btn" onclick="switchTab('invoice', this)">Free Invoice → CSV Tool</button>
+      </nav>
+    </header>
+
+    <section id="tab-mcp" class="panel active">
+      <div class="hero">
+        <h1>Structured B2B Data MCP Servers for AI Agents</h1>
+        <p>Zero monthly subscriptions. Pay strictly per structured JSON record via Apify MCP Server or SkillPay. Built for Claude Desktop, Cursor, OpenAI Agents, and enterprise automation pipelines.</p>
+        <div class="stats-row">
+          <div class="stat-pill"><strong>10</strong> Live B2B MCP Actors</div>
+          <div class="stat-pill"><strong>$0.005–$0.05</strong> Per Structured Event</div>
+          <div class="stat-pill"><strong>100%</strong> Public Open-Data Compliant</div>
+        </div>
+      </div>
+
+      <div class="grid" id="actor-grid"></div>
+    </section>
+
+    <section id="tab-invoice" class="panel">
+      <div class="hero">
+        <h1>Free Browser-Side Invoice & PO → CSV Converter</h1>
+        <p>100% local in your browser — your financial documents never leave your device. Paste raw invoice or purchase order lines and export clean accounting CSV instantly.</p>
+      </div>
+      <div class="tool-box">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+          <strong>Paste Invoice / PO Line Items (Description | Qty | Unit Price)</strong>
+          <div style="display:flex; gap:8px;">
+            <button class="btn" style="flex:none;" onclick="loadSampleInvoice()">Load Sample PO</button>
+            <button class="btn primary" style="flex:none;" onclick="parseInvoice()">Parse & Preview</button>
+            <button class="btn" style="flex:none;" onclick="downloadCSV()">Download .CSV</button>
+          </div>
+        </div>
+        <textarea id="inv-input" placeholder="SKU-104 Industrial Solar Inverter 5kW | 4 | $1,250.00"></textarea>
+        <div id="inv-summary" style="font-size:0.9rem; color:var(--green); font-weight:600;"></div>
+        <div style="overflow-x:auto;">
+          <table id="inv-table" style="display:none;">
+            <thead>
+              <tr><th>#</th><th>Item Description</th><th>Qty</th><th>Unit Price (USD)</th><th>Line Total (USD)</th></tr>
+            </thead>
+            <tbody id="inv-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© 2026 Neon MCP Hub · Pay-Per-Event B2B Data Infrastructure</div>
+      <div>
+        <a href="./llms.txt">llms.txt</a> ·
+        <a href="https://apify.com/veteran_steam_iyn" target="_blank" rel="noopener">Apify Developer Profile</a>
+      </div>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast">Copied MCP config to clipboard!</div>
+
+  <script>
+    const ACTORS = [
+      { slug: "niche-tradeshow-exhibitor-mcp", title: "Trade Show Exhibitor Extractor", price: "$0.015 / record", event: "exhibitor_record_extracted", desc: "Extract structured B2B exhibitor lists (company, booth, category, website) from public trade show directories." },
+      { slug: "niche-crossborder-review-cleaner", title: "E-Commerce Review Defect Cleaner", price: "$0.005 / review", event: "review_cleaned", desc: "Normalize Amazon/Shopify product reviews into structured defect tags and sentiment scores." },
+      { slug: "niche-public-tender-patent-mcp", title: "Public Tender & Patent Parser", price: "$0.050 / notice", event: "tender_parsed", desc: "Parse government procurement RFPs and patent grant notices into budgets, deadlines, and clean JSON." },
+      { slug: "niche-saas-pricing-table-mcp", title: "B2B SaaS Pricing Tier Extractor", price: "$0.020 / tier", event: "pricing_tier_extracted", desc: "Structure SaaS pricing pages into plan name, monthly price, and seat limits for competitive intel." },
+      { slug: "niche-clinical-trial-grant-mcp", title: "Clinical Trial & Grant Parser", price: "$0.030 / notice", event: "grant_record_parsed", desc: "Extract NCT IDs, award amounts, and recruiting status from public NIH/EU clinical trial notices." },
+      { slug: "niche-commercial-permit-lead-mcp", title: "Commercial Permit Lead Extractor", price: "$0.040 / lead", event: "permit_lead_extracted", desc: "Convert municipal commercial building & HVAC permit filings into contractor lead JSON." },
+      { slug: "niche-sec-edgar-10k-kpi-mcp", title: "SEC EDGAR 10-K/8-K KPI Extractor", price: "$0.045 / filing", event: "sec_filing_kpi_parsed", desc: "Extract revenue figures, YoY percentages, margins, and risk flags from public SEC filing excerpts." },
+      { slug: "niche-customs-hscode-tariff-mcp", title: "Customs HS Code & Tariff Parser", price: "$0.035 / SKU", event: "hscode_tariff_parsed", desc: "Parse cross-border SKU descriptions into HS codes, duty rates, and lithium/hazmat compliance flags." },
+      { slug: "niche-saas-changelog-diff-mcp", title: "SaaS Changelog & Release Parser", price: "$0.015 / entry", event: "changelog_entry_parsed", desc: "Structure SaaS release notes into version, date, security-fix, and breaking-change flags." },
+      { slug: "niche-freight-bol-manifest-mcp", title: "Freight BOL & Manifest Parser", price: "$0.040 / BOL", event: "bol_manifest_parsed", desc: "Parse ocean freight bill-of-lading rows into shipper, consignee, port pair, TEU container, and weight." }
+    ];
+
+    const grid = document.getElementById("actor-grid");
+    ACTORS.forEach(a => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <div>
+          <div class="card-top">
+            <h3>${a.title}</h3>
+            <span class="price">${a.price}</span>
+          </div>
+          <p>${a.desc}</p>
+          <div class="meta-row">actor: veteran_steam_iyn/${a.slug}<br/>event: ${a.event}</div>
+        </div>
+        <div class="card-actions">
+          <a class="btn primary" href="https://apify.com/veteran_steam_iyn/${a.slug}" target="_blank" rel="noopener">Open on Apify</a>
+          <button class="btn" onclick="copyMCP('${a.slug}')">Copy MCP JSON</button>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+
+    function showToast(msg) {
+      const t = document.getElementById("toast");
+      t.textContent = msg;
+      t.style.display = "block";
+      setTimeout(() => { t.style.display = "none"; }, 2200);
+    }
+
+    function copyMCP(slug) {
+      const cfg = JSON.stringify({
+        mcpServers: {
+          [slug]: {
+            url: `https://mcp.apify.com/?actors=veteran_steam_iyn/${slug}`
+          }
+        }
+      }, null, 2);
+      navigator.clipboard.writeText(cfg).then(() => showToast(`Copied MCP config for ${slug}`));
+    }
+
+    function switchTab(name, btn) {
+      document.querySelectorAll(".panel").forEach(p => p.classList.remove("active"));
+      document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+      document.getElementById("tab-" + name).classList.add("active");
+      btn.classList.add("active");
+    }
+
+    let parsedRows = [];
+    function loadSampleInvoice() {
+      document.getElementById("inv-input").value =
+        "SKU-104 Industrial Solar Inverter 5kW | 4 | $1,250.00\n" +
+        "SKU-209 Waterproof MC4 Connector Kit | 50 | $12.50\n" +
+        "SKU-318 Smart Energy Meter RS485 | 10 | $89.00\n" +
+        "FREIGHT-SEA Ocean Pallet Handling | 1 | $420.00";
+      parseInvoice();
+    }
+
+    function parseInvoice() {
+      const raw = document.getElementById("inv-input").value.trim();
+      const lines = raw.split(/\r?\n/).map(s => s.trim()).filter(Boolean);
+      parsedRows = [];
+      let grand = 0;
+      const tbody = document.getElementById("inv-tbody");
+      tbody.innerHTML = "";
+      lines.forEach((ln, idx) => {
+        const parts = ln.split("|").map(s => s.trim());
+        const desc = parts[0] || ln;
+        const qty = parseFloat((parts[1] || "1").replace(/[^0-9.]/g, "")) || 1;
+        const unit = parseFloat((parts[2] || "0").replace(/[^0-9.]/g, "")) || 0;
+        const total = qty * unit;
+        grand += total;
+        parsedRows.push({ idx: idx + 1, desc, qty, unit, total });
+        const tr = document.createElement("tr");
+        tr.innerHTML = `<td>${idx + 1}</td><td>${desc}</td><td>${qty}</td><td>$${unit.toFixed(2)}</td><td>$${total.toFixed(2)}</td>`;
+        tbody.appendChild(tr);
+      });
+      document.getElementById("inv-table").style.display = parsedRows.length ? "table" : "none";
+      document.getElementById("inv-summary").textContent = parsedRows.length
+        ? `Parsed ${parsedRows.length} line items · Grand Total: $${grand.toFixed(2)} USD`
+        : "Paste at least one line item above.";
+    }
+
+    function downloadCSV() {
+      if (!parsedRows.length) parseInvoice();
+      if (!parsedRows.length) return;
+      const header = "Line,Description,Quantity,Unit_Price_USD,Line_Total_USD\n";
+      const body = parsedRows.map(r => `${r.idx},"${r.desc.replace(/"/g, '""')}",${r.qty},${r.unit.toFixed(2)},${r.total.toFixed(2)}`).join("\n");
+      const blob = new Blob([header + body], { type: "text/csv;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url; a.download = "parsed_invoice_export.csv"; a.click();
+      URL.revokeObjectURL(url);
+      showToast("Downloaded parsed_invoice_export.csv");
+    }
+  </script>
+</body>
+</html>

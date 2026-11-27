@@ -1,0 +1,16 @@
+# Neon MCP Hub — B2B Structured Data MCP Servers
+
+> 10 Pay-Per-Event Model Context Protocol (MCP) servers hosted on Apify Store for AI Agents (Claude, Cursor, OpenAI Agents), plus a free client-side Invoice/PO to CSV converter.
+
+## MCP Servers (Apify Endpoint: `https://mcp.apify.com/?actors=veteran_steam_iyn/<slug>`)
+
+- `veteran_steam_iyn/niche-tradeshow-exhibitor-mcp`: Extract B2B trade show exhibitor records ($0.015/event)
+- `veteran_steam_iyn/niche-crossborder-review-cleaner`: Clean e-commerce product reviews into defect tags & sentiment ($0.005/event)
+- `veteran_steam_iyn/niche-public-tender-patent-mcp`: Parse public government procurement tenders & patent notices ($0.050/event)
+- `veteran_steam_iyn/niche-saas-pricing-table-mcp`: Extract B2B SaaS pricing tiers & seat limits ($0.020/event)
+- `veteran_steam_iyn/niche-clinical-trial-grant-mcp`: Parse public NIH/EU clinical trial & research grant notices ($0.030/event)
+- `veteran_steam_iyn/niche-commercial-permit-lead-mcp`: Extract municipal commercial building & HVAC permit leads ($0.040/event)
+- `veteran_steam_iyn/niche-sec-edgar-10k-kpi-mcp`: Extract SEC 10-K/8-K/10-Q financial KPIs & risk flags ($0.045/event)
+- `veteran_steam_iyn/niche-customs-hscode-tariff-mcp`: Parse cross-border SKU HS codes, duty rates & hazmat flags ($0.035/event)
+- `veteran_steam_iyn/niche-saas-changelog-diff-mcp`: Structure SaaS release notes & breaking changes ($0.015/event)
+- `veteran_steam_iyn/niche-freight-bol-manifest-mcp`: Parse ocean freight bill-of-lading & container manifests ($0.040/event)
