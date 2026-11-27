@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/sitemap.xml
