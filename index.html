@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Neon MCP Hub — 10 Pay-Per-Event B2B AI Agent MCP Servers & Free Invoice-to-CSV Tool</title>
+  <title>Neon MCP Hub — 20 Pay-Per-Event B2B AI Agent MCP Servers & Free Invoice-to-CSV Tool</title>
   <meta name="description" content="10 production-ready B2B Model Context Protocol (MCP) servers on Apify Store & SkillPay, plus a free client-side Invoice/PO to CSV converter." />
   <style>
     :root {
@@ -287,7 +287,10 @@
       const cfg = JSON.stringify({
         mcpServers: {
           [slug]: {
-            url: `https://mcp.apify.com/?actors=veteran_steam_iyn/${slug}`
+            url: `https://mcp.apify.com/?actors=veteran_steam_iyn/${slug}`,
+            headers: {
+              Authorization: "Bearer YOUR_APIFY_TOKEN"
+            }
           }
         }
       }, null, 2);
