@@ -1,0 +1,64 @@
+# Neon MCP Hub — Complete B2B MCP Server Reference (llms-full.txt)
+
+> Machine-readable specification of 10 Pay-Per-Event B2B Model Context Protocol (MCP) servers hosted on Apify Cloud and SkillPay, plus a free client-side Invoice/PO to CSV tool.
+> Canonical Hub: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/
+
+## Trade Show Exhibitor Directory Extractor (MCP & PPE) (`veteran_steam_iyn/niche-tradeshow-exhibitor-mcp`)
+- **Direct Answer**: Extract clean B2B exhibitor records (company, booth, category, website) from public trade show directories. MCP-ready for AI Agents.
+- **Pricing**: `$0.015` USD per `exhibitor_record_extracted` (Pay-Per-Event, no subscription)
+- **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-tradeshow-exhibitor-mcp`
+- **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-tradeshow-exhibitor-mcp.html
+
+## Cross-Border E-Commerce Review Defect & Sentiment Cleaner (MCP & PPE) (`veteran_steam_iyn/niche-crossborder-review-cleaner`)
+- **Direct Answer**: Normalize public e-commerce product reviews into structured defect tags and sentiment scores for Amazon/Shopify sellers and AI Agents.
+- **Pricing**: `$0.005` USD per `review_cleaned` (Pay-Per-Event, no subscription)
+- **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-crossborder-review-cleaner`
+- **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-crossborder-review-cleaner.html
+
+## Public Procurement Tender & Patent Notice Parser (MCP & PPE) (`veteran_steam_iyn/niche-public-tender-patent-mcp`)
+- **Direct Answer**: Parse public government procurement tenders and patent grant notices into clean JSON fields for B2B sales pipelines and MCP Agents.
+- **Pricing**: `$0.050` USD per `tender_parsed` (Pay-Per-Event, no subscription)
+- **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-public-tender-patent-mcp`
+- **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-public-tender-patent-mcp.html
+
+## B2B SaaS Pricing Tier & Billing Extractor (MCP & PPE) (`veteran_steam_iyn/niche-saas-pricing-table-mcp`)
+- **Direct Answer**: Parse public B2B SaaS pricing pages into structured JSON tiers (plan name, monthly/annual price, seat limits) for competitive intelligence AI Agents.
+- **Pricing**: `$0.020` USD per `pricing_tier_extracted` (Pay-Per-Event, no subscription)
+- **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-saas-pricing-table-mcp`
+- **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-saas-pricing-table-mcp.html
+
+## Public Clinical Trial & Research Grant Structured Parser (MCP & PPE) (`veteran_steam_iyn/niche-clinical-trial-grant-mcp`)
+- **Direct Answer**: Structure public NIH/EU clinical trial & academic grant notices into phase, sponsor, award amount, and recruiting status JSON.
+- **Pricing**: `$0.030` USD per `grant_record_parsed` (Pay-Per-Event, no subscription)
+- **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-clinical-trial-grant-mcp`
+- **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-clinical-trial-grant-mcp.html
+
+## Public Commercial Construction Permit Lead Extractor (MCP & PPE) (`veteran_steam_iyn/niche-commercial-permit-lead-mcp`)
+- **Direct Answer**: Convert public municipal commercial building & HVAC permit filings into clean contractor lead JSON (address, valuation, trade category).
+- **Pricing**: `$0.040` USD per `permit_lead_extracted` (Pay-Per-Event, no subscription)
+- **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-commercial-permit-lead-mcp`
+- **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-commercial-permit-lead-mcp.html
+
+## SEC EDGAR 10-K/8-K Financial KPI Extractor (MCP & PPE) (`veteran_steam_iyn/niche-sec-edgar-10k-kpi-mcp`)
+- **Direct Answer**: Extract structured revenue, YoY growth, guidance, and risk flags from public SEC 10-K/10-Q/8-K filing excerpts for FinTech AI Agents.
+- **Pricing**: `$0.045` USD per `sec_filing_kpi_parsed` (Pay-Per-Event, no subscription)
+- **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-sec-edgar-10k-kpi-mcp`
+- **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-sec-edgar-10k-kpi-mcp.html
+
+## Cross-Border HS Code & Customs Tariff Parser (MCP & PPE) (`veteran_steam_iyn/niche-customs-hscode-tariff-mcp`)
+- **Direct Answer**: Parse public cross-border SKU descriptions and customs tariff schedule lines into structured HS codes, duty rates, and compliance flags.
+- **Pricing**: `$0.035` USD per `hscode_tariff_parsed` (Pay-Per-Event, no subscription)
+- **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-customs-hscode-tariff-mcp`
+- **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-customs-hscode-tariff-mcp.html
+
+## B2B SaaS Changelog & Release Note Structurer (MCP & PPE) (`veteran_steam_iyn/niche-saas-changelog-diff-mcp`)
+- **Direct Answer**: Convert public SaaS release notes and changelogs into structured JSON (version, category, breaking-change flag) for competitive intel Agents.
+- **Pricing**: `$0.015` USD per `changelog_entry_parsed` (Pay-Per-Event, no subscription)
+- **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-saas-changelog-diff-mcp`
+- **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-saas-changelog-diff-mcp.html
+
+## Freight Bill-of-Lading & Container Manifest Parser (MCP & PPE) (`veteran_steam_iyn/niche-freight-bol-manifest-mcp`)
+- **Direct Answer**: Parse public ocean freight bill-of-lading and container manifest rows into structured shipper, consignee, port pair, and TEU JSON.
+- **Pricing**: `$0.040` USD per `bol_manifest_parsed` (Pay-Per-Event, no subscription)
+- **MCP Endpoint**: `https://mcp.apify.com/?actors=veteran_steam_iyn/niche-freight-bol-manifest-mcp`
+- **Documentation Page**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-freight-bol-manifest-mcp.html

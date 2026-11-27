@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/</loc>
-    <lastmod>2026-11-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/llms.txt</loc>
-    <lastmod>2026-11-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <url><loc>https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/</loc><lastmod>2026-11-27</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/llms.txt</loc><lastmod>2026-11-27</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/llms-full.txt</loc><lastmod>2026-11-27</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-tradeshow-exhibitor-mcp.html</loc><lastmod>2026-11-27</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-crossborder-review-cleaner.html</loc><lastmod>2026-11-27</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-public-tender-patent-mcp.html</loc><lastmod>2026-11-27</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-saas-pricing-table-mcp.html</loc><lastmod>2026-11-27</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-clinical-trial-grant-mcp.html</loc><lastmod>2026-11-27</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-commercial-permit-lead-mcp.html</loc><lastmod>2026-11-27</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-sec-edgar-10k-kpi-mcp.html</loc><lastmod>2026-11-27</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-customs-hscode-tariff-mcp.html</loc><lastmod>2026-11-27</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-saas-changelog-diff-mcp.html</loc><lastmod>2026-11-27</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-freight-bol-manifest-mcp.html</loc><lastmod>2026-11-27</lastmod><changefreq>weekly</changefreq></url>
 </urlset>
