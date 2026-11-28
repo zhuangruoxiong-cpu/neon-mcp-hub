@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neon-b2b-mcp"
+version = "3.2.0"
+description = "Open-Core B2B & Regulatory Live Open-Data MCP Server (SEC EDGAR, OpenFDA, USITC HTS, World Bank, NIH ClinicalTrials.gov, DNS SPF/DMARC)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+keywords = ["mcp", "mcp-server", "model-context-protocol", "sec-edgar", "openfda", "tariffs", "ai-agents", "apify"]
+dependencies = []
+
+[project.scripts]
+neon-b2b-mcp = "neon_mcp_server:main"

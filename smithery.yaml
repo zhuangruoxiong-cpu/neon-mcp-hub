@@ -1,0 +1,14 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      apifyToken:
+        type: string
+        description: Optional Apify API Token to unlock batch cloud runs (up to 50 items/call) across all 20 B2B MCP Actors.
+  commandFunction: |-
+    (config) => ({
+      command: 'python3',
+      args: ['neon_mcp_server.py'],
+      env: config.apifyToken ? { APIFY_TOKEN: config.apifyToken } : {}
+    })

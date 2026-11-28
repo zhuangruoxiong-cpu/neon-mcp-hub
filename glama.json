@@ -1,0 +1,6 @@
+{
+  "$schema": "https://glama.ai/mcp/schemas/server.json",
+  "maintainers": ["zhuangruoxiong-cpu"],
+  "name": "Neon B2B Live Open-Data MCP Suite",
+  "description": "Zero-dependency Python stdio + Hosted Apify Cloud MCP suite for SEC EDGAR 10-K/8-K filings, OpenFDA recalls, USITC HS tariffs, World Bank tenders, NIH ClinicalTrials.gov, and SPF/DMARC audits."
+}

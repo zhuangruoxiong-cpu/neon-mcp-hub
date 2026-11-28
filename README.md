@@ -1,49 +1,75 @@
-# ⚡ Neon MCP Hub — 20 Production B2B Model Context Protocol (MCP) Servers
+# ⚡ Neon B2B Live Open-Data MCP Suite (`v3.2`)
 
-[![Live Portal](https://img.shields.io/badge/Live_Portal-GitHub_Pages-38bdf8?style=for-the-badge)](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/)
-[![Apify Store](https://img.shields.io/badge/Apify_Store-20_B2B_MCP_Actors-34d399?style=for-the-badge)](https://apify.com/veteran_steam_iyn)
+[![Live Portal](https://img.shields.io/badge/Live_Portal-Neon_MCP_Hub-0284c7?style=flat-square)](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/)
+[![MCP Protocol](https://img.shields.io/badge/MCP-2024--11--05-10b981?style=flat-square)](https://modelcontextprotocol.io/)
+[![Zero Dependencies](https://img.shields.io/badge/Python_3.10+-Zero_Pip_Deps-6366f1?style=flat-square)](./neon_mcp_server.py)
+[![License: MIT](https://img.shields.io/badge/License-MIT-f59e0b?style=flat-square)](./LICENSE)
 
-> **Pay-Per-Event B2B Structured Data MCP Servers for Claude Desktop, Cursor, OpenAI Agents & RAG Pipelines.**
-> Zero monthly subscriptions. Dual-mode extraction (**Live Public URL Fetch + Direct Batch Text**). 100% public open-data compliant.
+**20 Pay-Per-Event B2B & Regulatory Model Context Protocol (MCP) Servers** — featuring **10 Live Official-API Flagships** (SEC EDGAR, US OpenFDA, USITC HTS Tariffs, World Bank Procurement, NIH ClinicalTrials.gov, Google DNS-over-HTTPS, CoinGecko, GitHub Releases, Remotive, Apple App Store) plus **10 Structured B2B Document Parsers**.
 
-🌐 **Live Portal, Interactive B2B Sandbox & Free Invoice → CSV Tool**: https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/  
-🤖 **Machine-Readable Agent Spec**: [`llms.txt`](./llms.txt) · [`llms-full.txt`](./llms-full.txt)
+🌐 **Interactive Sandbox & Free Invoice-to-CSV Tool**: [https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/)
 
 ---
 
-## 20 Live B2B MCP Servers (Apify Store & SkillPay Ready)
+## 🚀 Quickstart Option A: Zero-Install Hosted Cloud MCP (Claude Desktop / Cursor / Windsurf)
 
-| # | MCP Server | Category | Pricing (Pay-Per-Event) | Apify Store & Docs |
-|---|---|---|---|---|
-| 1 | `niche-tradeshow-exhibitor-mcp` | B2B Lead Gen | `$0.015` / exhibitor | [Apify](https://apify.com/veteran_steam_iyn/niche-tradeshow-exhibitor-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-tradeshow-exhibitor-mcp.html) |
-| 2 | `niche-crossborder-review-cleaner` | E-Commerce | `$0.005` / review | [Apify](https://apify.com/veteran_steam_iyn/niche-crossborder-review-cleaner) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-crossborder-review-cleaner.html) |
-| 3 | `niche-public-tender-patent-mcp` | Gov RFP / IP | `$0.050` / notice | [Apify](https://apify.com/veteran_steam_iyn/niche-public-tender-patent-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-public-tender-patent-mcp.html) |
-| 4 | `niche-saas-pricing-table-mcp` | Competitive Intel | `$0.020` / tier | [Apify](https://apify.com/veteran_steam_iyn/niche-saas-pricing-table-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-saas-pricing-table-mcp.html) |
-| 5 | `niche-clinical-trial-grant-mcp` | Bio / Grants | `$0.030` / notice | [Apify](https://apify.com/veteran_steam_iyn/niche-clinical-trial-grant-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-clinical-trial-grant-mcp.html) |
-| 6 | `niche-commercial-permit-lead-mcp` | Construction Leads | `$0.040` / permit | [Apify](https://apify.com/veteran_steam_iyn/niche-commercial-permit-lead-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-commercial-permit-lead-mcp.html) |
-| 7 | `niche-sec-edgar-10k-kpi-mcp` | FinTech / SEC | `$0.045` / filing | [Apify](https://apify.com/veteran_steam_iyn/niche-sec-edgar-10k-kpi-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-sec-edgar-10k-kpi-mcp.html) |
-| 8 | `niche-customs-hscode-tariff-mcp` | Trade / Customs | `$0.035` / SKU | [Apify](https://apify.com/veteran_steam_iyn/niche-customs-hscode-tariff-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-customs-hscode-tariff-mcp.html) |
-| 9 | `niche-saas-changelog-diff-mcp` | Product Intel | `$0.015` / entry | [Apify](https://apify.com/veteran_steam_iyn/niche-saas-changelog-diff-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-saas-changelog-diff-mcp.html) |
-| 10 | `niche-freight-bol-manifest-mcp` | Logistics / BOL | `$0.040` / manifest | [Apify](https://apify.com/veteran_steam_iyn/niche-freight-bol-manifest-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-freight-bol-manifest-mcp.html) |
-| 11 | `niche-fda-drug-recall-mcp` | Supply Chain Risk | `$0.035` / recall | [Apify](https://apify.com/veteran_steam_iyn/niche-fda-drug-recall-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-fda-drug-recall-mcp.html) |
-| 12 | `niche-eu-carbon-cbam-mcp` | ESG / EU CBAM | `$0.045` / report | [Apify](https://apify.com/veteran_steam_iyn/niche-eu-carbon-cbam-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-eu-carbon-cbam-mcp.html) |
-| 13 | `niche-b2b-rfp-compliance-mcp` | Enterprise Sales | `$0.050` / clause | [Apify](https://apify.com/veteran_steam_iyn/niche-b2b-rfp-compliance-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-b2b-rfp-compliance-mcp.html) |
-| 14 | `niche-job-salary-comp-mcp` | HR / Comp Intel | `$0.020` / role | [Apify](https://apify.com/veteran_steam_iyn/niche-job-salary-comp-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-job-salary-comp-mcp.html) |
-| 15 | `niche-domain-whois-dns-mcp` | Deliverability | `$0.015` / domain | [Apify](https://apify.com/veteran_steam_iyn/niche-domain-whois-dns-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-domain-whois-dns-mcp.html) |
-| 16 | `niche-patent-prior-art-mcp` | IP / Patents | `$0.045` / claim | [Apify](https://apify.com/veteran_steam_iyn/niche-patent-prior-art-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-patent-prior-art-mcp.html) |
-| 17 | `niche-esg-scope3-vendor-mcp` | ESG Scope 3 | `$0.040` / vendor | [Apify](https://apify.com/veteran_steam_iyn/niche-esg-scope3-vendor-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-esg-scope3-vendor-mcp.html) |
-| 18 | `niche-real-estate-auction-mcp` | Real Estate Leads | `$0.035` / parcel | [Apify](https://apify.com/veteran_steam_iyn/niche-real-estate-auction-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-real-estate-auction-mcp.html) |
-| 19 | `niche-appstore-churn-signal-mcp` | Mobile Product | `$0.020` / review | [Apify](https://apify.com/veteran_steam_iyn/niche-appstore-churn-signal-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-appstore-churn-signal-mcp.html) |
-| 20 | `niche-crypto-token-unlock-mcp` | Web3 / DAO | `$0.030` / event | [Apify](https://apify.com/veteran_steam_iyn/niche-crypto-token-unlock-mcp) · [Docs](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-crypto-token-unlock-mcp.html) |
-
-## Quick MCP Integration (Claude Desktop / Cursor)
+Connect directly to any of our cloud-hosted Pay-Per-Event MCP servers on Apify (`$0.005–$0.050` per structured record, **zero monthly subscription**, free `$5/mo` Apify starter credit included):
 
 ```json
 {
   "mcpServers": {
-    "neon-b2b-mcp": {
-      "url": "https://mcp.apify.com/?actors=veteran_steam_iyn/niche-tradeshow-exhibitor-mcp"
+    "neon-b2b-flagships": {
+      "url": "https://mcp.apify.com/?actors=veteran_steam_iyn/niche-sec-edgar-10k-kpi-mcp,veteran_steam_iyn/niche-fda-drug-recall-mcp,veteran_steam_iyn/niche-customs-hscode-tariff-mcp,veteran_steam_iyn/niche-public-tender-patent-mcp,veteran_steam_iyn/niche-clinical-trial-grant-mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_APIFY_TOKEN"
+      }
     }
   }
 }
 ```
+
+## 💻 Quickstart Option B: Zero-Dependency Local Open-Core Stdio Server
+
+`neon_mcp_server.py` runs on **pure Python 3.10+ standard library** (`0` external packages required).
+- **Free Local Preview Mode** (no token needed): Queries official public APIs directly (`<= 3` items/call).
+- **Cloud Pro Batch Mode** (set `APIFY_TOKEN`): Automatically scales batch queries up to `50` schema-validated records per call on Apify Cloud.
+
+```bash
+# Install & run instantly via uvx or git clone:
+uvx --from git+https://github.com/zhuangruoxiong-cpu/neon-mcp-hub neon-b2b-mcp
+```
+
+Or add to `claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "neon-b2b-local": {
+      "command": "python3",
+      "args": ["/path/to/neon-mcp-hub/neon_mcp_server.py"],
+      "env": {
+        "APIFY_TOKEN": "OPTIONAL_FOR_BATCH_SCALE"
+      }
+    }
+  }
+}
+```
+
+---
+
+## 🔥 10 Live Official-API Flagship MCP Servers
+
+| # | MCP Tool / Actor Slug | Official Real-Time Data Source | Price / Event | Docs |
+|---|---|---|---|---|
+| 1 | `niche-sec-edgar-10k-kpi-mcp` | **SEC EDGAR** Official Submissions API (`10-K/10-Q/8-K`) | `$0.045` | [Spec](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-sec-edgar-10k-kpi-mcp.html) |
+| 2 | `niche-fda-drug-recall-mcp` | **US OpenFDA** Enforcement API (`Drug/Food/Device`) | `$0.035` | [Spec](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-fda-drug-recall-mcp.html) |
+| 3 | `niche-customs-hscode-tariff-mcp` | **USITC** Official Harmonized Tariff Schedule (`HTS`) | `$0.035` | [Spec](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-customs-hscode-tariff-mcp.html) |
+| 4 | `niche-public-tender-patent-mcp` | **World Bank** Global Public Procurement Notices API | `$0.050` | [Spec](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-public-tender-patent-mcp.html) |
+| 5 | `niche-clinical-trial-grant-mcp` | **NIH ClinicalTrials.gov** Official REST API v2 | `$0.030` | [Spec](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-clinical-trial-grant-mcp.html) |
+| 6 | `niche-domain-whois-dns-mcp` | **Google DNS-over-HTTPS** Live SPF/DMARC Resolver | `$0.015` | [Spec](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-domain-whois-dns-mcp.html) |
+| 7 | `niche-crypto-token-unlock-mcp` | **CoinGecko** Live Markets & Supply Overhang API | `$0.030` | [Spec](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-crypto-token-unlock-mcp.html) |
+| 8 | `niche-saas-changelog-diff-mcp` | **GitHub** Official Software Releases Diff API | `$0.015` | [Spec](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-saas-changelog-diff-mcp.html) |
+| 9 | `niche-job-salary-comp-mcp` | **Remotive** Live Remote Tech Jobs & Salary API | `$0.020` | [Spec](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-job-salary-comp-mcp.html) |
+| 10 | `niche-appstore-churn-signal-mcp` | **Apple App Store** Official Customer Reviews JSON API | `$0.020` | [Spec](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-appstore-churn-signal-mcp.html) |
+
+Plus **10 Hybrid URL + Text B2B Structured Parsers** (`niche-tradeshow-exhibitor-mcp`, `niche-crossborder-review-cleaner`, `niche-saas-pricing-table-mcp`, `niche-commercial-permit-lead-mcp`, `niche-freight-bol-manifest-mcp`, `niche-eu-carbon-cbam-mcp`, `niche-b2b-rfp-compliance-mcp`, `niche-patent-prior-art-mcp`, `niche-esg-scope3-vendor-mcp`, `niche-real-estate-auction-mcp`) — see [llms-full.txt](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/llms-full.txt) for full schemas.

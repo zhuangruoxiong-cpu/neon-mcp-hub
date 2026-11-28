@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "io.github.zhuangruoxiong-cpu/neon-mcp-hub",
+  "description": "20 B2B & Regulatory Open-Data MCP Servers (SEC EDGAR, OpenFDA, USITC HTS, World Bank, ClinicalTrials.gov, DNS SPF/DMARC, CoinGecko, GitHub Releases, Remotive, App Store).",
+  "status": "active",
+  "repository": {
+    "url": "https://github.com/zhuangruoxiong-cpu/neon-mcp-hub",
+    "source": "github"
+  },
+  "version": "3.2.0",
+  "remotes": [
+    {
+      "transport_type": "streamable-http",
+      "url": "https://mcp.apify.com/?actors=veteran_steam_iyn/niche-sec-edgar-10k-kpi-mcp,veteran_steam_iyn/niche-fda-drug-recall-mcp,veteran_steam_iyn/niche-customs-hscode-tariff-mcp,veteran_steam_iyn/niche-public-tender-patent-mcp,veteran_steam_iyn/niche-clinical-trial-grant-mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer YOUR_APIFY_TOKEN",
+          "is_required": true,
+          "is_secret": true
+        }
+      ]
+    }
+  ]
+}

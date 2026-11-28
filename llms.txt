@@ -1,16 +1,30 @@
-# Neon MCP Hub — B2B Structured Data MCP Servers
+# Neon MCP Hub
 
-> 10 Pay-Per-Event Model Context Protocol (MCP) servers hosted on Apify Store for AI Agents (Claude, Cursor, OpenAI Agents), plus a free client-side Invoice/PO to CSV converter.
+> 20 Pay-Per-Event B2B Model Context Protocol (MCP) servers (including 10 Live Official-API servers for SEC EDGAR, OpenFDA, USITC HTS, World Bank, NIH ClinicalTrials.gov, Google DoH, CoinGecko, GitHub Releases, Remotive, and Apple App Store) + open-core Python stdio server `neon_mcp_server.py`.
 
-## MCP Servers (Apify Endpoint: `https://mcp.apify.com/?actors=veteran_steam_iyn/<slug>`)
+## Core Links
+- [Neon MCP Hub Portal & Free Sandbox](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/)
+- [Full Machine-Readable B2A Catalog (llms-full.txt)](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/llms-full.txt)
+- [GitHub Open-Core Python MCP Server](https://github.com/zhuangruoxiong-cpu/neon-mcp-hub)
 
-- `veteran_steam_iyn/niche-tradeshow-exhibitor-mcp`: Extract B2B trade show exhibitor records ($0.015/event)
-- `veteran_steam_iyn/niche-crossborder-review-cleaner`: Clean e-commerce product reviews into defect tags & sentiment ($0.005/event)
-- `veteran_steam_iyn/niche-public-tender-patent-mcp`: Parse public government procurement tenders & patent notices ($0.050/event)
-- `veteran_steam_iyn/niche-saas-pricing-table-mcp`: Extract B2B SaaS pricing tiers & seat limits ($0.020/event)
-- `veteran_steam_iyn/niche-clinical-trial-grant-mcp`: Parse public NIH/EU clinical trial & research grant notices ($0.030/event)
-- `veteran_steam_iyn/niche-commercial-permit-lead-mcp`: Extract municipal commercial building & HVAC permit leads ($0.040/event)
-- `veteran_steam_iyn/niche-sec-edgar-10k-kpi-mcp`: Extract SEC 10-K/8-K/10-Q financial KPIs & risk flags ($0.045/event)
-- `veteran_steam_iyn/niche-customs-hscode-tariff-mcp`: Parse cross-border SKU HS codes, duty rates & hazmat flags ($0.035/event)
-- `veteran_steam_iyn/niche-saas-changelog-diff-mcp`: Structure SaaS release notes & breaking changes ($0.015/event)
-- `veteran_steam_iyn/niche-freight-bol-manifest-mcp`: Parse ocean freight bill-of-lading & container manifests ($0.040/event)
+## 20 B2B MCP Servers
+- [Trade Show Exhibitor Directory Extractor (MCP & PPE)](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-tradeshow-exhibitor-mcp.html): $0.015/exhibitor_record_extracted
+- [Cross-Border E-Commerce Review Defect & Sentiment Cleaner (MCP & PPE)](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-crossborder-review-cleaner.html): $0.005/review_cleaned
+- [World Bank & Gov Procurement Tender Live Extractor (MCP)](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-public-tender-patent-mcp.html): $0.050/tender_parsed [LIVE API: World Bank Global Procurement API]
+- [B2B SaaS Pricing Tier & Billing Extractor (MCP & PPE)](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-saas-pricing-table-mcp.html): $0.020/pricing_tier_extracted
+- [ClinicalTrials.gov v2 Live Study & Grant Extractor (MCP)](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-clinical-trial-grant-mcp.html): $0.030/grant_record_parsed [LIVE API: NIH ClinicalTrials.gov API v2]
+- [Public Commercial Construction Permit Lead Extractor (MCP & PPE)](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-commercial-permit-lead-mcp.html): $0.040/permit_lead_extracted
+- [SEC EDGAR Live 10-K/10-Q/8-K Filings Extractor (MCP)](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-sec-edgar-10k-kpi-mcp.html): $0.045/sec_filing_kpi_parsed [LIVE API: SEC EDGAR Official API]
+- [USITC HTS Live Customs Tariff & Duty Extractor (MCP)](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-customs-hscode-tariff-mcp.html): $0.035/hscode_tariff_parsed [LIVE API: USITC Official HTS Tariff API]
+- [Live GitHub & SaaS Release Breaking-Change Diff (MCP)](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-saas-changelog-diff-mcp.html): $0.015/changelog_entry_parsed [LIVE API: GitHub Official Releases API]
+- [Freight Bill-of-Lading & Container Manifest Parser (MCP & PPE)](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-freight-bol-manifest-mcp.html): $0.040/bol_manifest_parsed
+- [OpenFDA Live Drug & Food Recall Extractor (MCP & PPE)](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-fda-drug-recall-mcp.html): $0.035/recall_notice_parsed [LIVE API: US OpenFDA Enforcement API]
+- [EU CBAM Carbon Border Emission Parser (MCP & PPE)](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-eu-carbon-cbam-mcp.html): $0.045/cbam_emission_parsed
+- [B2B RFP Compliance & SLA Clause Extractor (MCP & PPE)](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-b2b-rfp-compliance-mcp.html): $0.050/rfp_clause_extracted
+- [Live Remote Tech Job & Salary Band Extractor (MCP)](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-job-salary-comp-mcp.html): $0.020/job_comp_parsed [LIVE API: Remotive Live Remote Tech Jobs API]
+- [Live Domain SPF/DMARC/MX Email Deliverability Auditor (MCP)](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-domain-whois-dns-mcp.html): $0.015/dns_audit_parsed [LIVE API: Google DNS-over-HTTPS Live API]
+- [Patent Claims & Prior-Art Structured Extractor (MCP & PPE)](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-patent-prior-art-mcp.html): $0.045/patent_claim_parsed
+- [ESG Scope 3 Supplier Emissions Parser (MCP & PPE)](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-esg-scope3-vendor-mcp.html): $0.040/esg_vendor_parsed
+- [Commercial & Foreclosure Auction Lead Parser (MCP & PPE)](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-real-estate-auction-mcp.html): $0.035/auction_lead_parsed
+- [Live Apple App Store Review Churn & Bug Extractor (MCP)](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-appstore-churn-signal-mcp.html): $0.020/churn_signal_parsed [LIVE API: Apple Official App Store RSS JSON API]
+- [Live Crypto FDV & Locked Supply Overhang Extractor (MCP)](https://zhuangruoxiong-cpu.github.io/neon-mcp-hub/actors/niche-crypto-token-unlock-mcp.html): $0.030/token_unlock_parsed [LIVE API: CoinGecko Live Markets API]
